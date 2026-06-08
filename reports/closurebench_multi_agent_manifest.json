@@ -1,0 +1,37 @@
+{
+  "dataset": "data/closurebench_multi_agent.jsonl",
+  "dataset_size": 360,
+  "shards": 4,
+  "runs": [
+    {
+      "label": "mistral-small",
+      "model": "mistralai/mistral-small-2603",
+      "scored": "results/multi_agent/closure_contract_v3_multi_agent_mistral-small_scored.jsonl"
+    },
+    {
+      "label": "deepseek-flash",
+      "model": "deepseek-v4-flash",
+      "scored": "results/multi_agent/closure_contract_v3_multi_agent_deepseek-flash_scored.jsonl"
+    },
+    {
+      "label": "deepseek-pro",
+      "model": "deepseek-v4-pro",
+      "scored": "results/multi_agent/closure_contract_v3_multi_agent_deepseek-pro_scored.jsonl"
+    },
+    {
+      "label": "mistral-medium",
+      "model": "mistralai/mistral-medium-3-5",
+      "scored": "results/multi_agent/closure_contract_v3_multi_agent_mistral-medium_scored.jsonl"
+    },
+    {
+      "label": "llama-scout",
+      "model": "meta-llama/llama-4-scout",
+      "scored": "results/multi_agent/closure_contract_v3_multi_agent_llama-scout_scored.jsonl"
+    },
+    {
+      "label": "llama-maverick",
+      "model": "meta-llama/llama-4-maverick",
+      "scored": "results/multi_agent/closure_contract_v3_multi_agent_llama-maverick_scored.jsonl"
+    }
+  ]
+}

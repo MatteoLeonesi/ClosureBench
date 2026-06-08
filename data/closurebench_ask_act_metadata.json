@@ -1,0 +1,74 @@
+{
+  "source_dataset": "data/closurebench_base.jsonl",
+  "dataset": "data/closurebench_ask_act.jsonl",
+  "version": "closurebench_ask_act",
+  "num_items": 960,
+  "num_base_scenarios": 320,
+  "semantics": {
+    "owa": 320,
+    "cwa": 320,
+    "lcwa": 320
+  },
+  "domains": {
+    "cloud_deployment": 120,
+    "hospital_access": 120,
+    "library_services": 120,
+    "university_registration": 120,
+    "finance_controls": 120,
+    "procurement_review": 120,
+    "manufacturing_quality": 120,
+    "robotics_operations": 120
+  },
+  "families": {
+    "entailed_open_conclusion": 96,
+    "explicit_negative_closed": 96,
+    "explicit_negative_open": 96,
+    "closed_missing_with_open_distractor": 96,
+    "open_missing_with_closed_distractor": 96,
+    "open_missing_direct": 96,
+    "entailed_closed_conclusion": 96,
+    "closed_missing_direct": 96,
+    "closed_derived_missing_antecedent": 96,
+    "open_derived_missing_antecedent": 96
+  },
+  "subsets": {
+    "control_entailed": 192,
+    "control_explicit_negative": 192,
+    "core_contrastive": 576
+  },
+  "gold_truth_values": {
+    "true": 192,
+    "false": 480,
+    "unknown": 288
+  },
+  "gold_actions": {
+    "approve": 192,
+    "deny": 480,
+    "request_information": 288
+  },
+  "gold_reason_types": {
+    "entailed_by_fact_or_rule": 192,
+    "explicit_negative_fact": 192,
+    "global_closed_world_underivable": 192,
+    "local_open_world_underivable": 96,
+    "open_world_underivable": 192,
+    "local_closed_world_underivable": 96
+  },
+  "primary_metrics": [
+    "action_accuracy",
+    "truth_accuracy",
+    "full_decision_accuracy",
+    "ask_precision_recall_f1",
+    "targeted_information_accuracy",
+    "premature_denial_rate",
+    "excessive_ask_rate",
+    "closure_denial_accuracy",
+    "semantic_switch_action_accuracy"
+  ],
+  "notes": [
+    "This file is derived deterministically from ClosureBench V3.",
+    "Unknown direct targets ask for the target atom.",
+    "Unknown derived targets ask for the missing rule antecedent.",
+    "Approve/deny cases require null missing fields to avoid unnecessary escalation."
+  ]
+}

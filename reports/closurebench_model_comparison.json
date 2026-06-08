@@ -1,0 +1,336 @@
+{
+  "dataset": "data/closurebench_base.jsonl",
+  "n_dataset": 960,
+  "runs": {
+    "mistral-small": {
+      "n_scored": 960,
+      "n_dataset": 960,
+      "coverage": 100.0,
+      "models": [
+        "mistralai/mistral-small-2603"
+      ],
+      "api_errors": 0,
+      "parse_failures": 0,
+      "semantic_switch_accuracy": {
+        "correct": 179,
+        "n": 320,
+        "accuracy": 55.94
+      },
+      "core_contrastive_switch_accuracy": {
+        "correct": 53,
+        "n": 192,
+        "accuracy": 27.6
+      },
+      "lcwa_closed_scope_accuracy": {
+        "correct": 28,
+        "n": 96,
+        "accuracy": 29.17
+      },
+      "lcwa_open_scope_accuracy": {
+        "correct": 29,
+        "n": 96,
+        "accuracy": 30.21
+      },
+      "cwa_accuracy": {
+        "correct": 294,
+        "n": 320,
+        "accuracy": 91.88
+      },
+      "owa_accuracy": {
+        "correct": 295,
+        "n": 320,
+        "accuracy": 92.19
+      },
+      "false_accuracy": {
+        "correct": 384,
+        "n": 480,
+        "accuracy": 80.0
+      },
+      "unknown_accuracy": {
+        "correct": 198,
+        "n": 288,
+        "accuracy": 68.75
+      },
+      "overall_accuracy": {
+        "correct": 774,
+        "n": 960,
+        "accuracy": 80.62
+      }
+    },
+    "deepseek-flash": {
+      "n_scored": 960,
+      "n_dataset": 960,
+      "coverage": 100.0,
+      "models": [
+        "deepseek-v4-flash"
+      ],
+      "api_errors": 0,
+      "parse_failures": 0,
+      "semantic_switch_accuracy": {
+        "correct": 264,
+        "n": 320,
+        "accuracy": 82.5
+      },
+      "core_contrastive_switch_accuracy": {
+        "correct": 136,
+        "n": 192,
+        "accuracy": 70.83
+      },
+      "lcwa_closed_scope_accuracy": {
+        "correct": 48,
+        "n": 96,
+        "accuracy": 50.0
+      },
+      "lcwa_open_scope_accuracy": {
+        "correct": 96,
+        "n": 96,
+        "accuracy": 100.0
+      },
+      "cwa_accuracy": {
+        "correct": 280,
+        "n": 320,
+        "accuracy": 87.5
+      },
+      "owa_accuracy": {
+        "correct": 320,
+        "n": 320,
+        "accuracy": 100.0
+      },
+      "false_accuracy": {
+        "correct": 392,
+        "n": 480,
+        "accuracy": 81.67
+      },
+      "unknown_accuracy": {
+        "correct": 288,
+        "n": 288,
+        "accuracy": 100.0
+      },
+      "overall_accuracy": {
+        "correct": 872,
+        "n": 960,
+        "accuracy": 90.83
+      }
+    },
+    "deepseek-pro": {
+      "n_scored": 960,
+      "n_dataset": 960,
+      "coverage": 100.0,
+      "models": [
+        "deepseek-v4-pro"
+      ],
+      "api_errors": 0,
+      "parse_failures": 0,
+      "semantic_switch_accuracy": {
+        "correct": 276,
+        "n": 320,
+        "accuracy": 86.25
+      },
+      "core_contrastive_switch_accuracy": {
+        "correct": 148,
+        "n": 192,
+        "accuracy": 77.08
+      },
+      "lcwa_closed_scope_accuracy": {
+        "correct": 60,
+        "n": 96,
+        "accuracy": 62.5
+      },
+      "lcwa_open_scope_accuracy": {
+        "correct": 96,
+        "n": 96,
+        "accuracy": 100.0
+      },
+      "cwa_accuracy": {
+        "correct": 294,
+        "n": 320,
+        "accuracy": 91.88
+      },
+      "owa_accuracy": {
+        "correct": 320,
+        "n": 320,
+        "accuracy": 100.0
+      },
+      "false_accuracy": {
+        "correct": 418,
+        "n": 480,
+        "accuracy": 87.08
+      },
+      "unknown_accuracy": {
+        "correct": 288,
+        "n": 288,
+        "accuracy": 100.0
+      },
+      "overall_accuracy": {
+        "correct": 898,
+        "n": 960,
+        "accuracy": 93.54
+      }
+    },
+    "mistral-medium": {
+      "n_scored": 960,
+      "n_dataset": 960,
+      "coverage": 100.0,
+      "models": [
+        "mistralai/mistral-medium-3-5"
+      ],
+      "api_errors": 0,
+      "parse_failures": 0,
+      "semantic_switch_accuracy": {
+        "correct": 284,
+        "n": 320,
+        "accuracy": 88.75
+      },
+      "core_contrastive_switch_accuracy": {
+        "correct": 156,
+        "n": 192,
+        "accuracy": 81.25
+      },
+      "lcwa_closed_scope_accuracy": {
+        "correct": 60,
+        "n": 96,
+        "accuracy": 62.5
+      },
+      "lcwa_open_scope_accuracy": {
+        "correct": 96,
+        "n": 96,
+        "accuracy": 100.0
+      },
+      "cwa_accuracy": {
+        "correct": 318,
+        "n": 320,
+        "accuracy": 99.38
+      },
+      "owa_accuracy": {
+        "correct": 320,
+        "n": 320,
+        "accuracy": 100.0
+      },
+      "false_accuracy": {
+        "correct": 442,
+        "n": 480,
+        "accuracy": 92.08
+      },
+      "unknown_accuracy": {
+        "correct": 288,
+        "n": 288,
+        "accuracy": 100.0
+      },
+      "overall_accuracy": {
+        "correct": 922,
+        "n": 960,
+        "accuracy": 96.04
+      }
+    },
+    "llama-scout": {
+      "n_scored": 960,
+      "n_dataset": 960,
+      "coverage": 100.0,
+      "models": [
+        "meta-llama/llama-4-scout"
+      ],
+      "api_errors": 0,
+      "parse_failures": 0,
+      "semantic_switch_accuracy": {
+        "correct": 163,
+        "n": 320,
+        "accuracy": 50.94
+      },
+      "core_contrastive_switch_accuracy": {
+        "correct": 35,
+        "n": 192,
+        "accuracy": 18.23
+      },
+      "lcwa_closed_scope_accuracy": {
+        "correct": 3,
+        "n": 96,
+        "accuracy": 3.12
+      },
+      "lcwa_open_scope_accuracy": {
+        "correct": 54,
+        "n": 96,
+        "accuracy": 56.25
+      },
+      "cwa_accuracy": {
+        "correct": 221,
+        "n": 320,
+        "accuracy": 69.06
+      },
+      "owa_accuracy": {
+        "correct": 277,
+        "n": 320,
+        "accuracy": 86.56
+      },
+      "false_accuracy": {
+        "correct": 288,
+        "n": 480,
+        "accuracy": 60.0
+      },
+      "unknown_accuracy": {
+        "correct": 203,
+        "n": 288,
+        "accuracy": 70.49
+      },
+      "overall_accuracy": {
+        "correct": 683,
+        "n": 960,
+        "accuracy": 71.15
+      }
+    },
+    "llama-maverick": {
+      "n_scored": 960,
+      "n_dataset": 960,
+      "coverage": 100.0,
+      "models": [
+        "meta-llama/llama-4-maverick"
+      ],
+      "api_errors": 0,
+      "parse_failures": 0,
+      "semantic_switch_accuracy": {
+        "correct": 319,
+        "n": 320,
+        "accuracy": 99.69
+      },
+      "core_contrastive_switch_accuracy": {
+        "correct": 191,
+        "n": 192,
+        "accuracy": 99.48
+      },
+      "lcwa_closed_scope_accuracy": {
+        "correct": 96,
+        "n": 96,
+        "accuracy": 100.0
+      },
+      "lcwa_open_scope_accuracy": {
+        "correct": 96,
+        "n": 96,
+        "accuracy": 100.0
+      },
+      "cwa_accuracy": {
+        "correct": 319,
+        "n": 320,
+        "accuracy": 99.69
+      },
+      "owa_accuracy": {
+        "correct": 320,
+        "n": 320,
+        "accuracy": 100.0
+      },
+      "false_accuracy": {
+        "correct": 479,
+        "n": 480,
+        "accuracy": 99.79
+      },
+      "unknown_accuracy": {
+        "correct": 288,
+        "n": 288,
+        "accuracy": 100.0
+      },
+      "overall_accuracy": {
+        "correct": 959,
+        "n": 960,
+        "accuracy": 99.9
+      }
+    }
+  }
+}

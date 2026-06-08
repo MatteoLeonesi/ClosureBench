@@ -1,0 +1,116 @@
+{
+  "dataset": "data/closurebench_dynamic_dialogue.jsonl",
+  "dataset_turns": 300,
+  "repeats": 3,
+  "shards": 4,
+  "runs": [
+    {
+      "label": "mistral-small",
+      "model": "mistralai/mistral-small-2603",
+      "repeat": 1,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_mistral-small_repeat_1_scored.jsonl"
+    },
+    {
+      "label": "mistral-small",
+      "model": "mistralai/mistral-small-2603",
+      "repeat": 2,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_mistral-small_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "mistral-small",
+      "model": "mistralai/mistral-small-2603",
+      "repeat": 3,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_mistral-small_repeat_3_scored.jsonl"
+    },
+    {
+      "label": "deepseek-flash",
+      "model": "deepseek-v4-flash",
+      "repeat": 1,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_deepseek-flash_repeat_1_scored.jsonl"
+    },
+    {
+      "label": "deepseek-flash",
+      "model": "deepseek-v4-flash",
+      "repeat": 2,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_deepseek-flash_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "deepseek-flash",
+      "model": "deepseek-v4-flash",
+      "repeat": 3,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_deepseek-flash_repeat_3_scored.jsonl"
+    },
+    {
+      "label": "deepseek-pro",
+      "model": "deepseek-v4-pro",
+      "repeat": 1,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_deepseek-pro_repeat_1_scored.jsonl"
+    },
+    {
+      "label": "deepseek-pro",
+      "model": "deepseek-v4-pro",
+      "repeat": 2,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_deepseek-pro_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "deepseek-pro",
+      "model": "deepseek-v4-pro",
+      "repeat": 3,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_deepseek-pro_repeat_3_scored.jsonl"
+    },
+    {
+      "label": "mistral-medium",
+      "model": "mistralai/mistral-medium-3-5",
+      "repeat": 1,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_mistral-medium_repeat_1_scored.jsonl"
+    },
+    {
+      "label": "mistral-medium",
+      "model": "mistralai/mistral-medium-3-5",
+      "repeat": 2,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_mistral-medium_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "mistral-medium",
+      "model": "mistralai/mistral-medium-3-5",
+      "repeat": 3,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_mistral-medium_repeat_3_scored.jsonl"
+    },
+    {
+      "label": "llama-scout",
+      "model": "meta-llama/llama-4-scout",
+      "repeat": 1,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_llama-scout_repeat_1_scored.jsonl"
+    },
+    {
+      "label": "llama-scout",
+      "model": "meta-llama/llama-4-scout",
+      "repeat": 2,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_llama-scout_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "llama-scout",
+      "model": "meta-llama/llama-4-scout",
+      "repeat": 3,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_llama-scout_repeat_3_scored.jsonl"
+    },
+    {
+      "label": "llama-maverick",
+      "model": "meta-llama/llama-4-maverick",
+      "repeat": 1,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_llama-maverick_repeat_1_scored.jsonl"
+    },
+    {
+      "label": "llama-maverick",
+      "model": "meta-llama/llama-4-maverick",
+      "repeat": 2,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_llama-maverick_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "llama-maverick",
+      "model": "meta-llama/llama-4-maverick",
+      "repeat": 3,
+      "scored": "results/dynamic_dialogue_replicates/closure_contract_v3_dynamic_dialogue_llama-maverick_repeat_3_scored.jsonl"
+    }
+  ]
+}

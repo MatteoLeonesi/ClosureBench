@@ -1,0 +1,394 @@
+{
+  "n_scored": 960,
+  "n_dataset": 960,
+  "coverage": 100.0,
+  "api_errors": 0,
+  "json_valid": {
+    "n": 882,
+    "rate": 91.88
+  },
+  "answer_parse": {
+    "n": 960,
+    "rate": 100.0
+  },
+  "overall_accuracy": {
+    "correct": 683,
+    "n": 960,
+    "accuracy": 71.15
+  },
+  "by_semantics": {
+    "cwa": {
+      "n": 320,
+      "correct": 221,
+      "accuracy": 69.06
+    },
+    "lcwa": {
+      "n": 320,
+      "correct": 185,
+      "accuracy": 57.81
+    },
+    "owa": {
+      "n": 320,
+      "correct": 277,
+      "accuracy": 86.56
+    }
+  },
+  "by_subset": {
+    "control_entailed": {
+      "n": 192,
+      "correct": 192,
+      "accuracy": 100.0
+    },
+    "control_explicit_negative": {
+      "n": 192,
+      "correct": 192,
+      "accuracy": 100.0
+    },
+    "core_contrastive": {
+      "n": 576,
+      "correct": 299,
+      "accuracy": 51.91
+    }
+  },
+  "by_family": {
+    "closed_derived_missing_antecedent": {
+      "n": 96,
+      "correct": 43,
+      "accuracy": 44.79
+    },
+    "closed_missing_direct": {
+      "n": 96,
+      "correct": 33,
+      "accuracy": 34.38
+    },
+    "closed_missing_with_open_distractor": {
+      "n": 96,
+      "correct": 36,
+      "accuracy": 37.5
+    },
+    "entailed_closed_conclusion": {
+      "n": 96,
+      "correct": 96,
+      "accuracy": 100.0
+    },
+    "entailed_open_conclusion": {
+      "n": 96,
+      "correct": 96,
+      "accuracy": 100.0
+    },
+    "explicit_negative_closed": {
+      "n": 96,
+      "correct": 96,
+      "accuracy": 100.0
+    },
+    "explicit_negative_open": {
+      "n": 96,
+      "correct": 96,
+      "accuracy": 100.0
+    },
+    "open_derived_missing_antecedent": {
+      "n": 96,
+      "correct": 37,
+      "accuracy": 38.54
+    },
+    "open_missing_direct": {
+      "n": 96,
+      "correct": 65,
+      "accuracy": 67.71
+    },
+    "open_missing_with_closed_distractor": {
+      "n": 96,
+      "correct": 85,
+      "accuracy": 88.54
+    }
+  },
+  "by_family_and_semantics": {
+    "closed_derived_missing_antecedent": {
+      "cwa": {
+        "n": 32,
+        "correct": 10,
+        "accuracy": 31.25
+      },
+      "lcwa": {
+        "n": 32,
+        "correct": 1,
+        "accuracy": 3.12
+      },
+      "owa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      }
+    },
+    "closed_missing_direct": {
+      "cwa": {
+        "n": 32,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "lcwa": {
+        "n": 32,
+        "correct": 1,
+        "accuracy": 3.12
+      },
+      "owa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      }
+    },
+    "closed_missing_with_open_distractor": {
+      "cwa": {
+        "n": 32,
+        "correct": 3,
+        "accuracy": 9.38
+      },
+      "lcwa": {
+        "n": 32,
+        "correct": 1,
+        "accuracy": 3.12
+      },
+      "owa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      }
+    },
+    "entailed_closed_conclusion": {
+      "cwa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      },
+      "lcwa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      },
+      "owa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      }
+    },
+    "entailed_open_conclusion": {
+      "cwa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      },
+      "lcwa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      },
+      "owa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      }
+    },
+    "explicit_negative_closed": {
+      "cwa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      },
+      "lcwa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      },
+      "owa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      }
+    },
+    "explicit_negative_open": {
+      "cwa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      },
+      "lcwa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      },
+      "owa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      }
+    },
+    "open_derived_missing_antecedent": {
+      "cwa": {
+        "n": 32,
+        "correct": 31,
+        "accuracy": 96.88
+      },
+      "lcwa": {
+        "n": 32,
+        "correct": 2,
+        "accuracy": 6.25
+      },
+      "owa": {
+        "n": 32,
+        "correct": 4,
+        "accuracy": 12.5
+      }
+    },
+    "open_missing_direct": {
+      "cwa": {
+        "n": 32,
+        "correct": 28,
+        "accuracy": 87.5
+      },
+      "lcwa": {
+        "n": 32,
+        "correct": 20,
+        "accuracy": 62.5
+      },
+      "owa": {
+        "n": 32,
+        "correct": 17,
+        "accuracy": 53.12
+      }
+    },
+    "open_missing_with_closed_distractor": {
+      "cwa": {
+        "n": 32,
+        "correct": 21,
+        "accuracy": 65.62
+      },
+      "lcwa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      },
+      "owa": {
+        "n": 32,
+        "correct": 32,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "by_gold_answer": {
+    "false": {
+      "n": 480,
+      "correct": 288,
+      "accuracy": 60.0
+    },
+    "true": {
+      "n": 192,
+      "correct": 192,
+      "accuracy": 100.0
+    },
+    "unknown": {
+      "n": 288,
+      "correct": 203,
+      "accuracy": 70.49
+    }
+  },
+  "by_gold_reason_type": {
+    "entailed_by_fact_or_rule": {
+      "n": 192,
+      "correct": 192,
+      "accuracy": 100.0
+    },
+    "explicit_negative_fact": {
+      "n": 192,
+      "correct": 192,
+      "accuracy": 100.0
+    },
+    "global_closed_world_underivable": {
+      "n": 192,
+      "correct": 93,
+      "accuracy": 48.44
+    },
+    "local_closed_world_underivable": {
+      "n": 96,
+      "correct": 3,
+      "accuracy": 3.12
+    },
+    "local_open_world_underivable": {
+      "n": 96,
+      "correct": 54,
+      "accuracy": 56.25
+    },
+    "open_world_underivable": {
+      "n": 192,
+      "correct": 149,
+      "accuracy": 77.6
+    }
+  },
+  "semantic_switch_accuracy": {
+    "complete_base_groups": 320,
+    "correct_groups": 163,
+    "accuracy": 50.94
+  },
+  "core_contrastive_switch_accuracy": {
+    "complete_base_groups": 192,
+    "correct_groups": 35,
+    "accuracy": 18.23
+  },
+  "unknown_accuracy": {
+    "correct": 203,
+    "n": 288,
+    "accuracy": 70.49
+  },
+  "false_accuracy": {
+    "correct": 288,
+    "n": 480,
+    "accuracy": 60.0
+  },
+  "true_accuracy": {
+    "correct": 192,
+    "n": 192,
+    "accuracy": 100.0
+  },
+  "lcwa_open_scope_accuracy": {
+    "correct": 54,
+    "n": 96,
+    "accuracy": 56.25
+  },
+  "lcwa_closed_scope_accuracy": {
+    "correct": 3,
+    "n": 96,
+    "accuracy": 3.12
+  },
+  "semantic_bias_index": {
+    "owa_unknown_predicted_false_rate": 22.4,
+    "lcwa_open_predicted_false_rate": 43.75,
+    "lcwa_closed_predicted_unknown_rate": 93.75
+  },
+  "error_types": {
+    "correct": 683,
+    "open_world_bias": 99,
+    "missed_local_closure": 90,
+    "closure_scope_error_false_for_open_predicate": 42,
+    "closed_world_bias": 43,
+    "hallucinated_true": 3
+  },
+  "baselines": {
+    "always_cwa": {
+      "correct": 672,
+      "accuracy": 70.0,
+      "n": 960
+    },
+    "always_owa": {
+      "correct": 672,
+      "accuracy": 70.0,
+      "n": 960
+    },
+    "ignore_lcwa": {
+      "correct": 864,
+      "accuracy": 90.0,
+      "n": 960
+    }
+  },
+  "models": [
+    "meta-llama/llama-4-scout"
+  ]
+}

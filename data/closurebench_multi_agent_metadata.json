@@ -1,0 +1,42 @@
+{
+  "name": "ClosureBench-MA",
+  "source_dataset": "data/closurebench_base.jsonl",
+  "num_items": 360,
+  "num_base_scenarios": 120,
+  "semantics": {
+    "cwa": 120,
+    "lcwa": 120,
+    "owa": 120
+  },
+  "subsets": {
+    "core_contrastive": 216,
+    "control_entailed": 72,
+    "control_explicit_negative": 72
+  },
+  "gold_truth_values": {
+    "false": 178,
+    "unknown": 110,
+    "true": 72
+  },
+  "gold_source_used": {
+    "agent_a": 166,
+    "agent_b": 179,
+    "both": 15
+  },
+  "gold_closure_handling": {
+    "closed_absence": 106,
+    "open_absence": 110,
+    "entailed_or_explicit": 72,
+    "explicit_negative": 72
+  },
+  "domains": {
+    "cloud_deployment": 45,
+    "finance_controls": 45,
+    "hospital_access": 42,
+    "library_services": 30,
+    "manufacturing_quality": 60,
+    "procurement_review": 45,
+    "robotics_operations": 48,
+    "university_registration": 45
+  }
+}

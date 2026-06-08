@@ -1,0 +1,1627 @@
+{
+  "dataset": "data/closurebench_base.jsonl",
+  "n_dataset": 960,
+  "manifest": "reports/closurebench_replicate_manifest.json",
+  "runs": {
+    "deepseek-flash": {
+      "model": "deepseek-v4-flash",
+      "n_repeats": 3,
+      "replicates": [
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "deepseek-v4-flash"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "semantic_switch_accuracy": {
+            "correct": 263,
+            "n": 320,
+            "accuracy": 82.19
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 135,
+            "n": 192,
+            "accuracy": 70.31
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 51,
+            "n": 96,
+            "accuracy": 53.12
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 96,
+            "n": 96,
+            "accuracy": 100.0
+          },
+          "cwa_accuracy": {
+            "correct": 277,
+            "n": 320,
+            "accuracy": 86.56
+          },
+          "owa_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "false_accuracy": {
+            "correct": 392,
+            "n": 480,
+            "accuracy": 81.67
+          },
+          "unknown_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "overall_accuracy": {
+            "correct": 872,
+            "n": 960,
+            "accuracy": 90.83
+          },
+          "repeat": 1,
+          "scored": "results/replicates/closure_contract_v3_deepseek-flash_repeat_1_scored.jsonl"
+        },
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "deepseek-v4-flash"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "semantic_switch_accuracy": {
+            "correct": 259,
+            "n": 320,
+            "accuracy": 80.94
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 131,
+            "n": 192,
+            "accuracy": 68.23
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 47,
+            "n": 96,
+            "accuracy": 48.96
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 96,
+            "n": 96,
+            "accuracy": 100.0
+          },
+          "cwa_accuracy": {
+            "correct": 275,
+            "n": 320,
+            "accuracy": 85.94
+          },
+          "owa_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "false_accuracy": {
+            "correct": 386,
+            "n": 480,
+            "accuracy": 80.42
+          },
+          "unknown_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "overall_accuracy": {
+            "correct": 866,
+            "n": 960,
+            "accuracy": 90.21
+          },
+          "repeat": 2,
+          "scored": "results/replicates/closure_contract_v3_deepseek-flash_repeat_2_scored.jsonl"
+        },
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "deepseek-v4-flash"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "semantic_switch_accuracy": {
+            "correct": 258,
+            "n": 320,
+            "accuracy": 80.62
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 130,
+            "n": 192,
+            "accuracy": 67.71
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 45,
+            "n": 96,
+            "accuracy": 46.88
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 96,
+            "n": 96,
+            "accuracy": 100.0
+          },
+          "cwa_accuracy": {
+            "correct": 274,
+            "n": 320,
+            "accuracy": 85.62
+          },
+          "owa_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "false_accuracy": {
+            "correct": 383,
+            "n": 480,
+            "accuracy": 79.79
+          },
+          "unknown_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "overall_accuracy": {
+            "correct": 863,
+            "n": 960,
+            "accuracy": 89.9
+          },
+          "repeat": 3,
+          "scored": "results/replicates/closure_contract_v3_deepseek-flash_repeat_3_scored.jsonl"
+        }
+      ],
+      "metrics": {
+        "semantic_switch_accuracy": {
+          "mean": 81.25,
+          "sd": 0.83,
+          "ci95_half_width": 2.06,
+          "min": 80.62,
+          "max": 82.19,
+          "values": [
+            82.19,
+            80.94,
+            80.62
+          ]
+        },
+        "core_contrastive_switch_accuracy": {
+          "mean": 68.75,
+          "sd": 1.38,
+          "ci95_half_width": 3.42,
+          "min": 67.71,
+          "max": 70.31,
+          "values": [
+            70.31,
+            68.23,
+            67.71
+          ]
+        },
+        "lcwa_closed_scope_accuracy": {
+          "mean": 49.65,
+          "sd": 3.18,
+          "ci95_half_width": 7.89,
+          "min": 46.88,
+          "max": 53.12,
+          "values": [
+            53.12,
+            48.96,
+            46.88
+          ]
+        },
+        "lcwa_open_scope_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "cwa_accuracy": {
+          "mean": 86.04,
+          "sd": 0.48,
+          "ci95_half_width": 1.19,
+          "min": 85.62,
+          "max": 86.56,
+          "values": [
+            86.56,
+            85.94,
+            85.62
+          ]
+        },
+        "owa_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "overall_accuracy": {
+          "mean": 90.31,
+          "sd": 0.47,
+          "ci95_half_width": 1.18,
+          "min": 89.9,
+          "max": 90.83,
+          "values": [
+            90.83,
+            90.21,
+            89.9
+          ]
+        }
+      },
+      "item_answer_consistency": {
+        "n": 960,
+        "consistent": 949,
+        "rate": 98.85
+      },
+      "mean_parse_failures": 0.0,
+      "mean_api_errors": 0.0
+    },
+    "deepseek-pro": {
+      "model": "deepseek-v4-pro",
+      "n_repeats": 3,
+      "replicates": [
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "deepseek-v4-pro"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "semantic_switch_accuracy": {
+            "correct": 277,
+            "n": 320,
+            "accuracy": 86.56
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 149,
+            "n": 192,
+            "accuracy": 77.6
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 61,
+            "n": 96,
+            "accuracy": 63.54
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 96,
+            "n": 96,
+            "accuracy": 100.0
+          },
+          "cwa_accuracy": {
+            "correct": 293,
+            "n": 320,
+            "accuracy": 91.56
+          },
+          "owa_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "false_accuracy": {
+            "correct": 418,
+            "n": 480,
+            "accuracy": 87.08
+          },
+          "unknown_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "overall_accuracy": {
+            "correct": 898,
+            "n": 960,
+            "accuracy": 93.54
+          },
+          "repeat": 1,
+          "scored": "results/replicates/closure_contract_v3_deepseek-pro_repeat_1_scored.jsonl"
+        },
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "deepseek-v4-pro"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "semantic_switch_accuracy": {
+            "correct": 276,
+            "n": 320,
+            "accuracy": 86.25
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 148,
+            "n": 192,
+            "accuracy": 77.08
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 59,
+            "n": 96,
+            "accuracy": 61.46
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 96,
+            "n": 96,
+            "accuracy": 100.0
+          },
+          "cwa_accuracy": {
+            "correct": 294,
+            "n": 320,
+            "accuracy": 91.88
+          },
+          "owa_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "false_accuracy": {
+            "correct": 417,
+            "n": 480,
+            "accuracy": 86.88
+          },
+          "unknown_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "overall_accuracy": {
+            "correct": 897,
+            "n": 960,
+            "accuracy": 93.44
+          },
+          "repeat": 2,
+          "scored": "results/replicates/closure_contract_v3_deepseek-pro_repeat_2_scored.jsonl"
+        },
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "deepseek-v4-pro"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "semantic_switch_accuracy": {
+            "correct": 277,
+            "n": 320,
+            "accuracy": 86.56
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 149,
+            "n": 192,
+            "accuracy": 77.6
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 59,
+            "n": 96,
+            "accuracy": 61.46
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 96,
+            "n": 96,
+            "accuracy": 100.0
+          },
+          "cwa_accuracy": {
+            "correct": 298,
+            "n": 320,
+            "accuracy": 93.12
+          },
+          "owa_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "false_accuracy": {
+            "correct": 421,
+            "n": 480,
+            "accuracy": 87.71
+          },
+          "unknown_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "overall_accuracy": {
+            "correct": 901,
+            "n": 960,
+            "accuracy": 93.85
+          },
+          "repeat": 3,
+          "scored": "results/replicates/closure_contract_v3_deepseek-pro_repeat_3_scored.jsonl"
+        }
+      ],
+      "metrics": {
+        "semantic_switch_accuracy": {
+          "mean": 86.46,
+          "sd": 0.18,
+          "ci95_half_width": 0.44,
+          "min": 86.25,
+          "max": 86.56,
+          "values": [
+            86.56,
+            86.25,
+            86.56
+          ]
+        },
+        "core_contrastive_switch_accuracy": {
+          "mean": 77.43,
+          "sd": 0.3,
+          "ci95_half_width": 0.75,
+          "min": 77.08,
+          "max": 77.6,
+          "values": [
+            77.6,
+            77.08,
+            77.6
+          ]
+        },
+        "lcwa_closed_scope_accuracy": {
+          "mean": 62.15,
+          "sd": 1.2,
+          "ci95_half_width": 2.98,
+          "min": 61.46,
+          "max": 63.54,
+          "values": [
+            63.54,
+            61.46,
+            61.46
+          ]
+        },
+        "lcwa_open_scope_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "cwa_accuracy": {
+          "mean": 92.19,
+          "sd": 0.82,
+          "ci95_half_width": 2.05,
+          "min": 91.56,
+          "max": 93.12,
+          "values": [
+            91.56,
+            91.88,
+            93.12
+          ]
+        },
+        "owa_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "overall_accuracy": {
+          "mean": 93.61,
+          "sd": 0.21,
+          "ci95_half_width": 0.53,
+          "min": 93.44,
+          "max": 93.85,
+          "values": [
+            93.54,
+            93.44,
+            93.85
+          ]
+        }
+      },
+      "item_answer_consistency": {
+        "n": 960,
+        "consistent": 946,
+        "rate": 98.54
+      },
+      "mean_parse_failures": 0.0,
+      "mean_api_errors": 0.0
+    },
+    "llama-maverick": {
+      "model": "meta-llama/llama-4-maverick",
+      "n_repeats": 3,
+      "replicates": [
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "meta-llama/llama-4-maverick"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "semantic_switch_accuracy": {
+            "correct": 318,
+            "n": 320,
+            "accuracy": 99.38
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 190,
+            "n": 192,
+            "accuracy": 98.96
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 95,
+            "n": 96,
+            "accuracy": 98.96
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 96,
+            "n": 96,
+            "accuracy": 100.0
+          },
+          "cwa_accuracy": {
+            "correct": 319,
+            "n": 320,
+            "accuracy": 99.69
+          },
+          "owa_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "false_accuracy": {
+            "correct": 478,
+            "n": 480,
+            "accuracy": 99.58
+          },
+          "unknown_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "overall_accuracy": {
+            "correct": 958,
+            "n": 960,
+            "accuracy": 99.79
+          },
+          "repeat": 1,
+          "scored": "results/replicates/closure_contract_v3_llama-maverick_repeat_1_scored.jsonl"
+        },
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "meta-llama/llama-4-maverick"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "semantic_switch_accuracy": {
+            "correct": 319,
+            "n": 320,
+            "accuracy": 99.69
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 191,
+            "n": 192,
+            "accuracy": 99.48
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 96,
+            "n": 96,
+            "accuracy": 100.0
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 96,
+            "n": 96,
+            "accuracy": 100.0
+          },
+          "cwa_accuracy": {
+            "correct": 319,
+            "n": 320,
+            "accuracy": 99.69
+          },
+          "owa_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "false_accuracy": {
+            "correct": 479,
+            "n": 480,
+            "accuracy": 99.79
+          },
+          "unknown_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "overall_accuracy": {
+            "correct": 959,
+            "n": 960,
+            "accuracy": 99.9
+          },
+          "repeat": 2,
+          "scored": "results/replicates/closure_contract_v3_llama-maverick_repeat_2_scored.jsonl"
+        },
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "meta-llama/llama-4-maverick"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "semantic_switch_accuracy": {
+            "correct": 319,
+            "n": 320,
+            "accuracy": 99.69
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 191,
+            "n": 192,
+            "accuracy": 99.48
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 96,
+            "n": 96,
+            "accuracy": 100.0
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 96,
+            "n": 96,
+            "accuracy": 100.0
+          },
+          "cwa_accuracy": {
+            "correct": 319,
+            "n": 320,
+            "accuracy": 99.69
+          },
+          "owa_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "false_accuracy": {
+            "correct": 479,
+            "n": 480,
+            "accuracy": 99.79
+          },
+          "unknown_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "overall_accuracy": {
+            "correct": 959,
+            "n": 960,
+            "accuracy": 99.9
+          },
+          "repeat": 3,
+          "scored": "results/replicates/closure_contract_v3_llama-maverick_repeat_3_scored.jsonl"
+        }
+      ],
+      "metrics": {
+        "semantic_switch_accuracy": {
+          "mean": 99.59,
+          "sd": 0.18,
+          "ci95_half_width": 0.44,
+          "min": 99.38,
+          "max": 99.69,
+          "values": [
+            99.38,
+            99.69,
+            99.69
+          ]
+        },
+        "core_contrastive_switch_accuracy": {
+          "mean": 99.31,
+          "sd": 0.3,
+          "ci95_half_width": 0.75,
+          "min": 98.96,
+          "max": 99.48,
+          "values": [
+            98.96,
+            99.48,
+            99.48
+          ]
+        },
+        "lcwa_closed_scope_accuracy": {
+          "mean": 99.65,
+          "sd": 0.6,
+          "ci95_half_width": 1.49,
+          "min": 98.96,
+          "max": 100.0,
+          "values": [
+            98.96,
+            100.0,
+            100.0
+          ]
+        },
+        "lcwa_open_scope_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "cwa_accuracy": {
+          "mean": 99.69,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 99.69,
+          "max": 99.69,
+          "values": [
+            99.69,
+            99.69,
+            99.69
+          ]
+        },
+        "owa_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "overall_accuracy": {
+          "mean": 99.86,
+          "sd": 0.06,
+          "ci95_half_width": 0.16,
+          "min": 99.79,
+          "max": 99.9,
+          "values": [
+            99.79,
+            99.9,
+            99.9
+          ]
+        }
+      },
+      "item_answer_consistency": {
+        "n": 960,
+        "consistent": 959,
+        "rate": 99.9
+      },
+      "mean_parse_failures": 0.0,
+      "mean_api_errors": 0.0
+    },
+    "llama-scout": {
+      "model": "meta-llama/llama-4-scout",
+      "n_repeats": 3,
+      "replicates": [
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "meta-llama/llama-4-scout"
+          ],
+          "api_errors": 0,
+          "parse_failures": 1,
+          "semantic_switch_accuracy": {
+            "correct": 162,
+            "n": 320,
+            "accuracy": 50.62
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 35,
+            "n": 192,
+            "accuracy": 18.23
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 4,
+            "n": 96,
+            "accuracy": 4.17
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 52,
+            "n": 96,
+            "accuracy": 54.17
+          },
+          "cwa_accuracy": {
+            "correct": 223,
+            "n": 320,
+            "accuracy": 69.69
+          },
+          "owa_accuracy": {
+            "correct": 281,
+            "n": 320,
+            "accuracy": 87.81
+          },
+          "false_accuracy": {
+            "correct": 290,
+            "n": 480,
+            "accuracy": 60.42
+          },
+          "unknown_accuracy": {
+            "correct": 206,
+            "n": 288,
+            "accuracy": 71.53
+          },
+          "overall_accuracy": {
+            "correct": 688,
+            "n": 960,
+            "accuracy": 71.67
+          },
+          "repeat": 1,
+          "scored": "results/replicates/closure_contract_v3_llama-scout_repeat_1_scored.jsonl"
+        },
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "meta-llama/llama-4-scout"
+          ],
+          "api_errors": 0,
+          "parse_failures": 1,
+          "semantic_switch_accuracy": {
+            "correct": 164,
+            "n": 320,
+            "accuracy": 51.25
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 37,
+            "n": 192,
+            "accuracy": 19.27
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 6,
+            "n": 96,
+            "accuracy": 6.25
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 52,
+            "n": 96,
+            "accuracy": 54.17
+          },
+          "cwa_accuracy": {
+            "correct": 220,
+            "n": 320,
+            "accuracy": 68.75
+          },
+          "owa_accuracy": {
+            "correct": 278,
+            "n": 320,
+            "accuracy": 86.88
+          },
+          "false_accuracy": {
+            "correct": 290,
+            "n": 480,
+            "accuracy": 60.42
+          },
+          "unknown_accuracy": {
+            "correct": 202,
+            "n": 288,
+            "accuracy": 70.14
+          },
+          "overall_accuracy": {
+            "correct": 684,
+            "n": 960,
+            "accuracy": 71.25
+          },
+          "repeat": 2,
+          "scored": "results/replicates/closure_contract_v3_llama-scout_repeat_2_scored.jsonl"
+        },
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "meta-llama/llama-4-scout"
+          ],
+          "api_errors": 0,
+          "parse_failures": 2,
+          "semantic_switch_accuracy": {
+            "correct": 161,
+            "n": 320,
+            "accuracy": 50.31
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 33,
+            "n": 192,
+            "accuracy": 17.19
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 3,
+            "n": 96,
+            "accuracy": 3.12
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 47,
+            "n": 96,
+            "accuracy": 48.96
+          },
+          "cwa_accuracy": {
+            "correct": 222,
+            "n": 320,
+            "accuracy": 69.38
+          },
+          "owa_accuracy": {
+            "correct": 278,
+            "n": 320,
+            "accuracy": 86.88
+          },
+          "false_accuracy": {
+            "correct": 289,
+            "n": 480,
+            "accuracy": 60.21
+          },
+          "unknown_accuracy": {
+            "correct": 197,
+            "n": 288,
+            "accuracy": 68.4
+          },
+          "overall_accuracy": {
+            "correct": 678,
+            "n": 960,
+            "accuracy": 70.62
+          },
+          "repeat": 3,
+          "scored": "results/replicates/closure_contract_v3_llama-scout_repeat_3_scored.jsonl"
+        }
+      ],
+      "metrics": {
+        "semantic_switch_accuracy": {
+          "mean": 50.73,
+          "sd": 0.48,
+          "ci95_half_width": 1.19,
+          "min": 50.31,
+          "max": 51.25,
+          "values": [
+            50.62,
+            51.25,
+            50.31
+          ]
+        },
+        "core_contrastive_switch_accuracy": {
+          "mean": 18.23,
+          "sd": 1.04,
+          "ci95_half_width": 2.58,
+          "min": 17.19,
+          "max": 19.27,
+          "values": [
+            18.23,
+            19.27,
+            17.19
+          ]
+        },
+        "lcwa_closed_scope_accuracy": {
+          "mean": 4.51,
+          "sd": 1.59,
+          "ci95_half_width": 3.96,
+          "min": 3.12,
+          "max": 6.25,
+          "values": [
+            4.17,
+            6.25,
+            3.12
+          ]
+        },
+        "lcwa_open_scope_accuracy": {
+          "mean": 52.43,
+          "sd": 3.01,
+          "ci95_half_width": 7.47,
+          "min": 48.96,
+          "max": 54.17,
+          "values": [
+            54.17,
+            54.17,
+            48.96
+          ]
+        },
+        "cwa_accuracy": {
+          "mean": 69.27,
+          "sd": 0.48,
+          "ci95_half_width": 1.19,
+          "min": 68.75,
+          "max": 69.69,
+          "values": [
+            69.69,
+            68.75,
+            69.38
+          ]
+        },
+        "owa_accuracy": {
+          "mean": 87.19,
+          "sd": 0.54,
+          "ci95_half_width": 1.33,
+          "min": 86.88,
+          "max": 87.81,
+          "values": [
+            87.81,
+            86.88,
+            86.88
+          ]
+        },
+        "overall_accuracy": {
+          "mean": 71.18,
+          "sd": 0.53,
+          "ci95_half_width": 1.31,
+          "min": 70.62,
+          "max": 71.67,
+          "values": [
+            71.67,
+            71.25,
+            70.62
+          ]
+        }
+      },
+      "item_answer_consistency": {
+        "n": 960,
+        "consistent": 895,
+        "rate": 93.23
+      },
+      "mean_parse_failures": 1.33,
+      "mean_api_errors": 0.0
+    },
+    "mistral-medium": {
+      "model": "mistralai/mistral-medium-3-5",
+      "n_repeats": 3,
+      "replicates": [
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "mistralai/mistral-medium-3-5"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "semantic_switch_accuracy": {
+            "correct": 281,
+            "n": 320,
+            "accuracy": 87.81
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 153,
+            "n": 192,
+            "accuracy": 79.69
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 57,
+            "n": 96,
+            "accuracy": 59.38
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 96,
+            "n": 96,
+            "accuracy": 100.0
+          },
+          "cwa_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "owa_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "false_accuracy": {
+            "correct": 441,
+            "n": 480,
+            "accuracy": 91.88
+          },
+          "unknown_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "overall_accuracy": {
+            "correct": 921,
+            "n": 960,
+            "accuracy": 95.94
+          },
+          "repeat": 1,
+          "scored": "results/replicates/closure_contract_v3_mistral-medium_repeat_1_scored.jsonl"
+        },
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "mistralai/mistral-medium-3-5"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "semantic_switch_accuracy": {
+            "correct": 278,
+            "n": 320,
+            "accuracy": 86.88
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 150,
+            "n": 192,
+            "accuracy": 78.12
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 54,
+            "n": 96,
+            "accuracy": 56.25
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 96,
+            "n": 96,
+            "accuracy": 100.0
+          },
+          "cwa_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "owa_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "false_accuracy": {
+            "correct": 438,
+            "n": 480,
+            "accuracy": 91.25
+          },
+          "unknown_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "overall_accuracy": {
+            "correct": 918,
+            "n": 960,
+            "accuracy": 95.62
+          },
+          "repeat": 2,
+          "scored": "results/replicates/closure_contract_v3_mistral-medium_repeat_2_scored.jsonl"
+        },
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "mistralai/mistral-medium-3-5"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "semantic_switch_accuracy": {
+            "correct": 277,
+            "n": 320,
+            "accuracy": 86.56
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 149,
+            "n": 192,
+            "accuracy": 77.6
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 53,
+            "n": 96,
+            "accuracy": 55.21
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 96,
+            "n": 96,
+            "accuracy": 100.0
+          },
+          "cwa_accuracy": {
+            "correct": 317,
+            "n": 320,
+            "accuracy": 99.06
+          },
+          "owa_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "false_accuracy": {
+            "correct": 434,
+            "n": 480,
+            "accuracy": 90.42
+          },
+          "unknown_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "overall_accuracy": {
+            "correct": 914,
+            "n": 960,
+            "accuracy": 95.21
+          },
+          "repeat": 3,
+          "scored": "results/replicates/closure_contract_v3_mistral-medium_repeat_3_scored.jsonl"
+        }
+      ],
+      "metrics": {
+        "semantic_switch_accuracy": {
+          "mean": 87.08,
+          "sd": 0.65,
+          "ci95_half_width": 1.61,
+          "min": 86.56,
+          "max": 87.81,
+          "values": [
+            87.81,
+            86.88,
+            86.56
+          ]
+        },
+        "core_contrastive_switch_accuracy": {
+          "mean": 78.47,
+          "sd": 1.09,
+          "ci95_half_width": 2.7,
+          "min": 77.6,
+          "max": 79.69,
+          "values": [
+            79.69,
+            78.12,
+            77.6
+          ]
+        },
+        "lcwa_closed_scope_accuracy": {
+          "mean": 56.95,
+          "sd": 2.17,
+          "ci95_half_width": 5.39,
+          "min": 55.21,
+          "max": 59.38,
+          "values": [
+            59.38,
+            56.25,
+            55.21
+          ]
+        },
+        "lcwa_open_scope_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "cwa_accuracy": {
+          "mean": 99.69,
+          "sd": 0.54,
+          "ci95_half_width": 1.35,
+          "min": 99.06,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            99.06
+          ]
+        },
+        "owa_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "overall_accuracy": {
+          "mean": 95.59,
+          "sd": 0.37,
+          "ci95_half_width": 0.91,
+          "min": 95.21,
+          "max": 95.94,
+          "values": [
+            95.94,
+            95.62,
+            95.21
+          ]
+        }
+      },
+      "item_answer_consistency": {
+        "n": 960,
+        "consistent": 936,
+        "rate": 97.5
+      },
+      "mean_parse_failures": 0.0,
+      "mean_api_errors": 0.0
+    },
+    "mistral-small": {
+      "model": "mistralai/mistral-small-2603",
+      "n_repeats": 3,
+      "replicates": [
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "mistralai/mistral-small-2603"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "semantic_switch_accuracy": {
+            "correct": 176,
+            "n": 320,
+            "accuracy": 55.0
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 50,
+            "n": 192,
+            "accuracy": 26.04
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 29,
+            "n": 96,
+            "accuracy": 30.21
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 29,
+            "n": 96,
+            "accuracy": 30.21
+          },
+          "cwa_accuracy": {
+            "correct": 293,
+            "n": 320,
+            "accuracy": 91.56
+          },
+          "owa_accuracy": {
+            "correct": 288,
+            "n": 320,
+            "accuracy": 90.0
+          },
+          "false_accuracy": {
+            "correct": 384,
+            "n": 480,
+            "accuracy": 80.0
+          },
+          "unknown_accuracy": {
+            "correct": 191,
+            "n": 288,
+            "accuracy": 66.32
+          },
+          "overall_accuracy": {
+            "correct": 767,
+            "n": 960,
+            "accuracy": 79.9
+          },
+          "repeat": 1,
+          "scored": "results/replicates/closure_contract_v3_mistral-small_repeat_1_scored.jsonl"
+        },
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "mistralai/mistral-small-2603"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "semantic_switch_accuracy": {
+            "correct": 172,
+            "n": 320,
+            "accuracy": 53.75
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 48,
+            "n": 192,
+            "accuracy": 25.0
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 27,
+            "n": 96,
+            "accuracy": 28.12
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 29,
+            "n": 96,
+            "accuracy": 30.21
+          },
+          "cwa_accuracy": {
+            "correct": 293,
+            "n": 320,
+            "accuracy": 91.56
+          },
+          "owa_accuracy": {
+            "correct": 288,
+            "n": 320,
+            "accuracy": 90.0
+          },
+          "false_accuracy": {
+            "correct": 380,
+            "n": 480,
+            "accuracy": 79.17
+          },
+          "unknown_accuracy": {
+            "correct": 193,
+            "n": 288,
+            "accuracy": 67.01
+          },
+          "overall_accuracy": {
+            "correct": 765,
+            "n": 960,
+            "accuracy": 79.69
+          },
+          "repeat": 2,
+          "scored": "results/replicates/closure_contract_v3_mistral-small_repeat_2_scored.jsonl"
+        },
+        {
+          "n_scored": 960,
+          "n_dataset": 960,
+          "coverage": 100.0,
+          "models": [
+            "mistralai/mistral-small-2603"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "semantic_switch_accuracy": {
+            "correct": 187,
+            "n": 320,
+            "accuracy": 58.44
+          },
+          "core_contrastive_switch_accuracy": {
+            "correct": 61,
+            "n": 192,
+            "accuracy": 31.77
+          },
+          "lcwa_closed_scope_accuracy": {
+            "correct": 35,
+            "n": 96,
+            "accuracy": 36.46
+          },
+          "lcwa_open_scope_accuracy": {
+            "correct": 32,
+            "n": 96,
+            "accuracy": 33.33
+          },
+          "cwa_accuracy": {
+            "correct": 296,
+            "n": 320,
+            "accuracy": 92.5
+          },
+          "owa_accuracy": {
+            "correct": 292,
+            "n": 320,
+            "accuracy": 91.25
+          },
+          "false_accuracy": {
+            "correct": 393,
+            "n": 480,
+            "accuracy": 81.88
+          },
+          "unknown_accuracy": {
+            "correct": 198,
+            "n": 288,
+            "accuracy": 68.75
+          },
+          "overall_accuracy": {
+            "correct": 783,
+            "n": 960,
+            "accuracy": 81.56
+          },
+          "repeat": 3,
+          "scored": "results/replicates/closure_contract_v3_mistral-small_repeat_3_scored.jsonl"
+        }
+      ],
+      "metrics": {
+        "semantic_switch_accuracy": {
+          "mean": 55.73,
+          "sd": 2.43,
+          "ci95_half_width": 6.03,
+          "min": 53.75,
+          "max": 58.44,
+          "values": [
+            55.0,
+            53.75,
+            58.44
+          ]
+        },
+        "core_contrastive_switch_accuracy": {
+          "mean": 27.6,
+          "sd": 3.65,
+          "ci95_half_width": 9.06,
+          "min": 25.0,
+          "max": 31.77,
+          "values": [
+            26.04,
+            25.0,
+            31.77
+          ]
+        },
+        "lcwa_closed_scope_accuracy": {
+          "mean": 31.6,
+          "sd": 4.34,
+          "ci95_half_width": 10.78,
+          "min": 28.12,
+          "max": 36.46,
+          "values": [
+            30.21,
+            28.12,
+            36.46
+          ]
+        },
+        "lcwa_open_scope_accuracy": {
+          "mean": 31.25,
+          "sd": 1.8,
+          "ci95_half_width": 4.48,
+          "min": 30.21,
+          "max": 33.33,
+          "values": [
+            30.21,
+            30.21,
+            33.33
+          ]
+        },
+        "cwa_accuracy": {
+          "mean": 91.87,
+          "sd": 0.54,
+          "ci95_half_width": 1.35,
+          "min": 91.56,
+          "max": 92.5,
+          "values": [
+            91.56,
+            91.56,
+            92.5
+          ]
+        },
+        "owa_accuracy": {
+          "mean": 90.42,
+          "sd": 0.72,
+          "ci95_half_width": 1.79,
+          "min": 90.0,
+          "max": 91.25,
+          "values": [
+            90.0,
+            90.0,
+            91.25
+          ]
+        },
+        "overall_accuracy": {
+          "mean": 80.38,
+          "sd": 1.02,
+          "ci95_half_width": 2.55,
+          "min": 79.69,
+          "max": 81.56,
+          "values": [
+            79.9,
+            79.69,
+            81.56
+          ]
+        }
+      },
+      "item_answer_consistency": {
+        "n": 960,
+        "consistent": 877,
+        "rate": 91.35
+      },
+      "mean_parse_failures": 0.0,
+      "mean_api_errors": 0.0
+    }
+  }
+}

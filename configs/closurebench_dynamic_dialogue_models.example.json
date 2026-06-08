@@ -1,0 +1,68 @@
+[
+  {
+    "label": "mistral-small",
+    "model": "mistralai/mistral-small-2603",
+    "api_key_env": "OPENROUTER_API_KEY",
+    "chat_url": "https://openrouter.ai/api/v1/chat/completions",
+    "thinking": "default",
+    "response_format": false,
+    "timeout": 240,
+    "max_tokens": 1024,
+    "insecure_skip_verify": false
+  },
+  {
+    "label": "deepseek-flash",
+    "model": "deepseek-v4-flash",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "base_url": "https://api.deepseek.com",
+    "thinking": "disabled",
+    "response_format": true,
+    "timeout": 180,
+    "max_tokens": 1024,
+    "insecure_skip_verify": false
+  },
+  {
+    "label": "deepseek-pro",
+    "model": "deepseek-v4-pro",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "base_url": "https://api.deepseek.com",
+    "thinking": "disabled",
+    "response_format": true,
+    "timeout": 180,
+    "max_tokens": 1024,
+    "insecure_skip_verify": false
+  },
+  {
+    "label": "mistral-medium",
+    "model": "mistralai/mistral-medium-3-5",
+    "api_key_env": "OPENROUTER_API_KEY",
+    "chat_url": "https://openrouter.ai/api/v1/chat/completions",
+    "thinking": "default",
+    "response_format": false,
+    "timeout": 240,
+    "max_tokens": 1024,
+    "insecure_skip_verify": false
+  },
+  {
+    "label": "llama-scout",
+    "model": "meta-llama/llama-4-scout",
+    "api_key_env": "OPENROUTER_API_KEY",
+    "chat_url": "https://openrouter.ai/api/v1/chat/completions",
+    "thinking": "default",
+    "response_format": false,
+    "timeout": 240,
+    "max_tokens": 1024,
+    "insecure_skip_verify": false
+  },
+  {
+    "label": "llama-maverick",
+    "model": "meta-llama/llama-4-maverick",
+    "api_key_env": "OPENROUTER_API_KEY",
+    "chat_url": "https://openrouter.ai/api/v1/chat/completions",
+    "thinking": "default",
+    "response_format": false,
+    "timeout": 240,
+    "max_tokens": 1024,
+    "insecure_skip_verify": false
+  }
+]

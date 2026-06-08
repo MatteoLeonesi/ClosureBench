@@ -1,0 +1,13 @@
+__pycache__/
+.DS_Store
+*.pyc
+.venv/
+.ruff_cache/
+tmp/
+reports/**/*.md
+results/**/*_outputs.jsonl
+results/*_shards/
+results/replicate_shards/
+results/multi_agent_shards/
+results/probes/
+results/v3_candidate_shards/

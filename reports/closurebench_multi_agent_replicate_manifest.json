@@ -1,0 +1,135 @@
+{
+  "dataset": "data/closurebench_multi_agent.jsonl",
+  "dataset_size": 360,
+  "repeats": 3,
+  "shards": 4,
+  "temperature": 0.0,
+  "runs": [
+    {
+      "label": "mistral-small",
+      "model": "mistralai/mistral-small-2603",
+      "scored": "results/multi_agent/closure_contract_v3_multi_agent_mistral-small_scored.jsonl",
+      "repeat": 1,
+      "temperature": 0.0
+    },
+    {
+      "label": "mistral-small",
+      "model": "mistralai/mistral-small-2603",
+      "repeat": 2,
+      "temperature": 0.0,
+      "scored": "results/multi_agent/closurebench_multi_agent_mistral-small_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "mistral-small",
+      "model": "mistralai/mistral-small-2603",
+      "repeat": 3,
+      "temperature": 0.0,
+      "scored": "results/multi_agent/closurebench_multi_agent_mistral-small_repeat_3_scored.jsonl"
+    },
+    {
+      "label": "deepseek-flash",
+      "model": "deepseek-v4-flash",
+      "scored": "results/multi_agent/closure_contract_v3_multi_agent_deepseek-flash_scored.jsonl",
+      "repeat": 1,
+      "temperature": 0.0
+    },
+    {
+      "label": "deepseek-flash",
+      "model": "deepseek-v4-flash",
+      "repeat": 2,
+      "temperature": 0.0,
+      "scored": "results/multi_agent/closurebench_multi_agent_deepseek-flash_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "deepseek-flash",
+      "model": "deepseek-v4-flash",
+      "repeat": 3,
+      "temperature": 0.0,
+      "scored": "results/multi_agent/closurebench_multi_agent_deepseek-flash_repeat_3_scored.jsonl"
+    },
+    {
+      "label": "deepseek-pro",
+      "model": "deepseek-v4-pro",
+      "scored": "results/multi_agent/closure_contract_v3_multi_agent_deepseek-pro_scored.jsonl",
+      "repeat": 1,
+      "temperature": 0.0
+    },
+    {
+      "label": "deepseek-pro",
+      "model": "deepseek-v4-pro",
+      "repeat": 2,
+      "temperature": 0.0,
+      "scored": "results/multi_agent/closurebench_multi_agent_deepseek-pro_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "deepseek-pro",
+      "model": "deepseek-v4-pro",
+      "repeat": 3,
+      "temperature": 0.0,
+      "scored": "results/multi_agent/closurebench_multi_agent_deepseek-pro_repeat_3_scored.jsonl"
+    },
+    {
+      "label": "mistral-medium",
+      "model": "mistralai/mistral-medium-3-5",
+      "scored": "results/multi_agent/closure_contract_v3_multi_agent_mistral-medium_scored.jsonl",
+      "repeat": 1,
+      "temperature": 0.0
+    },
+    {
+      "label": "mistral-medium",
+      "model": "mistralai/mistral-medium-3-5",
+      "repeat": 2,
+      "temperature": 0.0,
+      "scored": "results/multi_agent/closurebench_multi_agent_mistral-medium_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "mistral-medium",
+      "model": "mistralai/mistral-medium-3-5",
+      "repeat": 3,
+      "temperature": 0.0,
+      "scored": "results/multi_agent/closurebench_multi_agent_mistral-medium_repeat_3_scored.jsonl"
+    },
+    {
+      "label": "llama-scout",
+      "model": "meta-llama/llama-4-scout",
+      "scored": "results/multi_agent/closure_contract_v3_multi_agent_llama-scout_scored.jsonl",
+      "repeat": 1,
+      "temperature": 0.0
+    },
+    {
+      "label": "llama-scout",
+      "model": "meta-llama/llama-4-scout",
+      "repeat": 2,
+      "temperature": 0.0,
+      "scored": "results/multi_agent/closurebench_multi_agent_llama-scout_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "llama-scout",
+      "model": "meta-llama/llama-4-scout",
+      "repeat": 3,
+      "temperature": 0.0,
+      "scored": "results/multi_agent/closurebench_multi_agent_llama-scout_repeat_3_scored.jsonl"
+    },
+    {
+      "label": "llama-maverick",
+      "model": "meta-llama/llama-4-maverick",
+      "scored": "results/multi_agent/closure_contract_v3_multi_agent_llama-maverick_scored.jsonl",
+      "repeat": 1,
+      "temperature": 0.0
+    },
+    {
+      "label": "llama-maverick",
+      "model": "meta-llama/llama-4-maverick",
+      "repeat": 2,
+      "temperature": 0.0,
+      "scored": "results/multi_agent/closurebench_multi_agent_llama-maverick_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "llama-maverick",
+      "model": "meta-llama/llama-4-maverick",
+      "repeat": 3,
+      "temperature": 0.0,
+      "scored": "results/multi_agent/closurebench_multi_agent_llama-maverick_repeat_3_scored.jsonl"
+    }
+  ]
+}

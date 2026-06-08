@@ -1,0 +1,76 @@
+{
+  "dataset": "closurebench_base.jsonl",
+  "version": "closurebench-v1",
+  "num_items": 960,
+  "num_base_scenarios": 320,
+  "domains": {
+    "cloud_deployment": 120,
+    "hospital_access": 120,
+    "library_services": 120,
+    "university_registration": 120,
+    "finance_controls": 120,
+    "procurement_review": 120,
+    "manufacturing_quality": 120,
+    "robotics_operations": 120
+  },
+  "families": {
+    "entailed_open_conclusion": 96,
+    "explicit_negative_closed": 96,
+    "explicit_negative_open": 96,
+    "closed_missing_with_open_distractor": 96,
+    "open_missing_with_closed_distractor": 96,
+    "open_missing_direct": 96,
+    "entailed_closed_conclusion": 96,
+    "closed_missing_direct": 96,
+    "closed_derived_missing_antecedent": 96,
+    "open_derived_missing_antecedent": 96
+  },
+  "subsets": {
+    "control_entailed": 192,
+    "control_explicit_negative": 192,
+    "core_contrastive": 576
+  },
+  "splits": {
+    "dev": 93,
+    "train": 648,
+    "test": 219
+  },
+  "semantics": {
+    "owa": 320,
+    "cwa": 320,
+    "lcwa": 320
+  },
+  "gold_answers": {
+    "true": 192,
+    "false": 480,
+    "unknown": 288
+  },
+  "gold_reason_types": {
+    "entailed_by_fact_or_rule": 192,
+    "explicit_negative_fact": 192,
+    "global_closed_world_underivable": 192,
+    "local_open_world_underivable": 96,
+    "open_world_underivable": 192,
+    "local_closed_world_underivable": 96
+  },
+  "semantic_switch_patterns": {
+    "false|false|false": 64,
+    "true|true|true": 64,
+    "unknown|false|false": 96,
+    "unknown|false|unknown": 96
+  },
+  "primary_metrics": [
+    "semantic_switch_accuracy",
+    "lcwa_closed_scope_accuracy",
+    "lcwa_open_scope_accuracy",
+    "cwa_accuracy",
+    "owa_accuracy"
+  ],
+  "notes": [
+    "V3 preserves pilot v1/v2 files and should be treated as the publication candidate.",
+    "Each base scenario has OWA, CWA, and LCWA variants with identical facts, rules, and target atom.",
+    "Each item contains natural-language text plus symbolic atoms/rules and a gold reason type.",
+    "Closure is explicit: closed predicates make unstated and underivable atoms false after rule closure.",
+    "Controls are retained but marked separately from core contrastive cases."
+  ]
+}

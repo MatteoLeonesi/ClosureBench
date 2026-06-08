@@ -1,0 +1,5426 @@
+{
+  "dataset": "data/closurebench_ask_act.jsonl",
+  "n_dataset": 960,
+  "manifest": "reports/closurebench_ask_act_replicate_manifest.json",
+  "runs": {
+    "deepseek-flash": {
+      "model": "deepseek-v4-flash",
+      "n_repeats": 3,
+      "replicates": [
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "deepseek-v4-flash"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "json_valid": {
+            "n": 955,
+            "rate": 99.48
+          },
+          "truth_accuracy": {
+            "correct": 895,
+            "n": 960,
+            "accuracy": 93.23
+          },
+          "action_accuracy": {
+            "correct": 895,
+            "n": 960,
+            "accuracy": 93.23
+          },
+          "full_decision_accuracy": {
+            "correct": 895,
+            "n": 960,
+            "accuracy": 93.23
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 277,
+            "n": 320,
+            "accuracy": 86.56
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 277,
+            "n": 320,
+            "accuracy": 86.56
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 149,
+            "n": 192,
+            "accuracy": 77.6
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 149,
+            "n": 192,
+            "accuracy": 77.6
+          },
+          "ask_metrics": {
+            "true_positive": 282,
+            "model_asks": 341,
+            "gold_asks": 288,
+            "precision": 82.7,
+            "recall": 97.92,
+            "f1": 89.67
+          },
+          "targeted_information_accuracy": {
+            "correct": 282,
+            "n": 288,
+            "accuracy": 97.92
+          },
+          "closure_denial_accuracy": {
+            "correct": 229,
+            "n": 288,
+            "accuracy": 79.51
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 282,
+            "n": 288,
+            "accuracy": 97.92
+          },
+          "internal_action_consistency": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "premature_denial_rate": {
+            "count": 6,
+            "n": 288,
+            "rate": 2.08
+          },
+          "premature_approval_rate": {
+            "count": 0,
+            "n": 768,
+            "rate": 0.0
+          },
+          "excessive_ask_rate": {
+            "count": 59,
+            "n": 672,
+            "rate": 8.78
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 59,
+            "n": 288,
+            "rate": 20.49
+          },
+          "corrupt_action_success_rate": {
+            "count": 0,
+            "n": 960,
+            "rate": 0.0
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 53,
+              "n": 59,
+              "rate": 89.83
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 6,
+              "n": 6,
+              "rate": 100.0
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 93.12,
+              "action_accuracy": 93.12,
+              "full_accuracy": 93.12
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 86.56,
+              "action_accuracy": 86.56,
+              "full_accuracy": 86.56
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 87.71,
+              "action_accuracy": 87.71,
+              "full_accuracy": 87.71
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 97.92,
+              "action_accuracy": 97.92,
+              "full_accuracy": 97.92
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 88.54,
+              "action_accuracy": 88.54,
+              "full_accuracy": 88.54
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 61.46,
+              "action_accuracy": 61.46,
+              "full_accuracy": 61.46
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 93.75,
+              "action_accuracy": 93.75,
+              "full_accuracy": 93.75
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 42,
+              "n": 96,
+              "accuracy": 43.75
+            },
+            "closed_missing_direct": {
+              "correct": 94,
+              "n": 96,
+              "accuracy": 97.92
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 93,
+              "n": 96,
+              "accuracy": 96.88
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 90,
+              "n": 96,
+              "accuracy": 93.75
+            },
+            "open_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            }
+          },
+          "error_types": {
+            "correct": 895,
+            "excessive_ask_under_closure_false": 59,
+            "premature_denial_from_unresolved_absence": 6
+          },
+          "repeat": 1,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_deepseek-flash_repeat_1_scored.jsonl"
+        },
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "deepseek-v4-flash"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "json_valid": {
+            "n": 954,
+            "rate": 99.38
+          },
+          "truth_accuracy": {
+            "correct": 892,
+            "n": 960,
+            "accuracy": 92.92
+          },
+          "action_accuracy": {
+            "correct": 892,
+            "n": 960,
+            "accuracy": 92.92
+          },
+          "full_decision_accuracy": {
+            "correct": 892,
+            "n": 960,
+            "accuracy": 92.92
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 276,
+            "n": 320,
+            "accuracy": 86.25
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 276,
+            "n": 320,
+            "accuracy": 86.25
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 148,
+            "n": 192,
+            "accuracy": 77.08
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 148,
+            "n": 192,
+            "accuracy": 77.08
+          },
+          "ask_metrics": {
+            "true_positive": 282,
+            "model_asks": 344,
+            "gold_asks": 288,
+            "precision": 81.98,
+            "recall": 97.92,
+            "f1": 89.24
+          },
+          "targeted_information_accuracy": {
+            "correct": 282,
+            "n": 288,
+            "accuracy": 97.92
+          },
+          "closure_denial_accuracy": {
+            "correct": 226,
+            "n": 288,
+            "accuracy": 78.47
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 282,
+            "n": 288,
+            "accuracy": 97.92
+          },
+          "internal_action_consistency": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "premature_denial_rate": {
+            "count": 6,
+            "n": 288,
+            "rate": 2.08
+          },
+          "premature_approval_rate": {
+            "count": 0,
+            "n": 768,
+            "rate": 0.0
+          },
+          "excessive_ask_rate": {
+            "count": 62,
+            "n": 672,
+            "rate": 9.23
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 62,
+            "n": 288,
+            "rate": 21.53
+          },
+          "corrupt_action_success_rate": {
+            "count": 0,
+            "n": 960,
+            "rate": 0.0
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 53,
+              "n": 62,
+              "rate": 85.48
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 5,
+              "n": 6,
+              "rate": 83.33
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 92.5,
+              "action_accuracy": 92.5,
+              "full_accuracy": 92.5
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 86.25,
+              "action_accuracy": 86.25,
+              "full_accuracy": 86.25
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 87.08,
+              "action_accuracy": 87.08,
+              "full_accuracy": 87.08
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 97.92,
+              "action_accuracy": 97.92,
+              "full_accuracy": 97.92
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 87.5,
+              "action_accuracy": 87.5,
+              "full_accuracy": 87.5
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 60.42,
+              "action_accuracy": 60.42,
+              "full_accuracy": 60.42
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 93.75,
+              "action_accuracy": 93.75,
+              "full_accuracy": 93.75
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 41,
+              "n": 96,
+              "accuracy": 42.71
+            },
+            "closed_missing_direct": {
+              "correct": 93,
+              "n": 96,
+              "accuracy": 96.88
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 92,
+              "n": 96,
+              "accuracy": 95.83
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 90,
+              "n": 96,
+              "accuracy": 93.75
+            },
+            "open_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            }
+          },
+          "error_types": {
+            "correct": 892,
+            "excessive_ask_under_closure_false": 62,
+            "premature_denial_from_unresolved_absence": 6
+          },
+          "repeat": 2,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_deepseek-flash_repeat_2_scored.jsonl"
+        },
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "deepseek-v4-flash"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "json_valid": {
+            "n": 958,
+            "rate": 99.79
+          },
+          "truth_accuracy": {
+            "correct": 894,
+            "n": 960,
+            "accuracy": 93.12
+          },
+          "action_accuracy": {
+            "correct": 894,
+            "n": 960,
+            "accuracy": 93.12
+          },
+          "full_decision_accuracy": {
+            "correct": 894,
+            "n": 960,
+            "accuracy": 93.12
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 277,
+            "n": 320,
+            "accuracy": 86.56
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 277,
+            "n": 320,
+            "accuracy": 86.56
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 149,
+            "n": 192,
+            "accuracy": 77.6
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 149,
+            "n": 192,
+            "accuracy": 77.6
+          },
+          "ask_metrics": {
+            "true_positive": 283,
+            "model_asks": 344,
+            "gold_asks": 288,
+            "precision": 82.27,
+            "recall": 98.26,
+            "f1": 89.56
+          },
+          "targeted_information_accuracy": {
+            "correct": 283,
+            "n": 288,
+            "accuracy": 98.26
+          },
+          "closure_denial_accuracy": {
+            "correct": 227,
+            "n": 288,
+            "accuracy": 78.82
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 283,
+            "n": 288,
+            "accuracy": 98.26
+          },
+          "internal_action_consistency": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "premature_denial_rate": {
+            "count": 5,
+            "n": 288,
+            "rate": 1.74
+          },
+          "premature_approval_rate": {
+            "count": 0,
+            "n": 768,
+            "rate": 0.0
+          },
+          "excessive_ask_rate": {
+            "count": 61,
+            "n": 672,
+            "rate": 9.08
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 61,
+            "n": 288,
+            "rate": 21.18
+          },
+          "corrupt_action_success_rate": {
+            "count": 0,
+            "n": 960,
+            "rate": 0.0
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 59,
+              "n": 61,
+              "rate": 96.72
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 4,
+              "n": 5,
+              "rate": 80.0
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 92.81,
+              "action_accuracy": 92.81,
+              "full_accuracy": 92.81
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 86.56,
+              "action_accuracy": 86.56,
+              "full_accuracy": 86.56
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 87.29,
+              "action_accuracy": 87.29,
+              "full_accuracy": 87.29
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 98.26,
+              "action_accuracy": 98.26,
+              "full_accuracy": 98.26
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 88.02,
+              "action_accuracy": 88.02,
+              "full_accuracy": 88.02
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 60.42,
+              "action_accuracy": 60.42,
+              "full_accuracy": 60.42
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 94.79,
+              "action_accuracy": 94.79,
+              "full_accuracy": 94.79
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 41,
+              "n": 96,
+              "accuracy": 42.71
+            },
+            "closed_missing_direct": {
+              "correct": 93,
+              "n": 96,
+              "accuracy": 96.88
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 93,
+              "n": 96,
+              "accuracy": 96.88
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 91,
+              "n": 96,
+              "accuracy": 94.79
+            },
+            "open_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            }
+          },
+          "error_types": {
+            "correct": 894,
+            "excessive_ask_under_closure_false": 61,
+            "premature_denial_from_unresolved_absence": 5
+          },
+          "repeat": 3,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_deepseek-flash_repeat_3_scored.jsonl"
+        }
+      ],
+      "metrics": {
+        "action_accuracy": {
+          "mean": 93.09,
+          "sd": 0.16,
+          "ci95_half_width": 0.39,
+          "min": 92.92,
+          "max": 93.23,
+          "values": [
+            93.23,
+            92.92,
+            93.12
+          ]
+        },
+        "full_decision_accuracy": {
+          "mean": 93.09,
+          "sd": 0.16,
+          "ci95_half_width": 0.39,
+          "min": 92.92,
+          "max": 93.23,
+          "values": [
+            93.23,
+            92.92,
+            93.12
+          ]
+        },
+        "semantic_switch_action_accuracy": {
+          "mean": 86.46,
+          "sd": 0.18,
+          "ci95_half_width": 0.44,
+          "min": 86.25,
+          "max": 86.56,
+          "values": [
+            86.56,
+            86.25,
+            86.56
+          ]
+        },
+        "core_semantic_switch_action_accuracy": {
+          "mean": 77.43,
+          "sd": 0.3,
+          "ci95_half_width": 0.75,
+          "min": 77.08,
+          "max": 77.6,
+          "values": [
+            77.6,
+            77.08,
+            77.6
+          ]
+        },
+        "ask_precision": {
+          "mean": 82.32,
+          "sd": 0.36,
+          "ci95_half_width": 0.9,
+          "min": 81.98,
+          "max": 82.7,
+          "values": [
+            82.7,
+            81.98,
+            82.27
+          ]
+        },
+        "ask_recall": {
+          "mean": 98.03,
+          "sd": 0.2,
+          "ci95_half_width": 0.49,
+          "min": 97.92,
+          "max": 98.26,
+          "values": [
+            97.92,
+            97.92,
+            98.26
+          ]
+        },
+        "ask_f1": {
+          "mean": 89.49,
+          "sd": 0.22,
+          "ci95_half_width": 0.55,
+          "min": 89.24,
+          "max": 89.67,
+          "values": [
+            89.67,
+            89.24,
+            89.56
+          ]
+        },
+        "closure_denial_accuracy": {
+          "mean": 78.93,
+          "sd": 0.53,
+          "ci95_half_width": 1.31,
+          "min": 78.47,
+          "max": 79.51,
+          "values": [
+            79.51,
+            78.47,
+            78.82
+          ]
+        },
+        "unresolved_ask_accuracy": {
+          "mean": 98.03,
+          "sd": 0.2,
+          "ci95_half_width": 0.49,
+          "min": 97.92,
+          "max": 98.26,
+          "values": [
+            97.92,
+            97.92,
+            98.26
+          ]
+        },
+        "excessive_ask_on_closure_false_rate": {
+          "mean": 21.07,
+          "sd": 0.53,
+          "ci95_half_width": 1.31,
+          "min": 20.49,
+          "max": 21.53,
+          "values": [
+            20.49,
+            21.53,
+            21.18
+          ]
+        },
+        "premature_denial_rate": {
+          "mean": 1.97,
+          "sd": 0.2,
+          "ci95_half_width": 0.49,
+          "min": 1.74,
+          "max": 2.08,
+          "values": [
+            2.08,
+            2.08,
+            1.74
+          ]
+        }
+      },
+      "item_decision_consistency": {
+        "n": 960,
+        "consistent": 948,
+        "rate": 98.75
+      },
+      "mean_parse_failures": 0.0,
+      "mean_api_errors": 0.0
+    },
+    "deepseek-pro": {
+      "model": "deepseek-v4-pro",
+      "n_repeats": 3,
+      "replicates": [
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "deepseek-v4-pro"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "json_valid": {
+            "n": 958,
+            "rate": 99.79
+          },
+          "truth_accuracy": {
+            "correct": 899,
+            "n": 960,
+            "accuracy": 93.65
+          },
+          "action_accuracy": {
+            "correct": 899,
+            "n": 960,
+            "accuracy": 93.65
+          },
+          "full_decision_accuracy": {
+            "correct": 899,
+            "n": 960,
+            "accuracy": 93.65
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 284,
+            "n": 320,
+            "accuracy": 88.75
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 284,
+            "n": 320,
+            "accuracy": 88.75
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 156,
+            "n": 192,
+            "accuracy": 81.25
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 156,
+            "n": 192,
+            "accuracy": 81.25
+          },
+          "ask_metrics": {
+            "true_positive": 288,
+            "model_asks": 349,
+            "gold_asks": 288,
+            "precision": 82.52,
+            "recall": 100.0,
+            "f1": 90.42
+          },
+          "targeted_information_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "closure_denial_accuracy": {
+            "correct": 227,
+            "n": 288,
+            "accuracy": 78.82
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "internal_action_consistency": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "premature_denial_rate": {
+            "count": 0,
+            "n": 288,
+            "rate": 0.0
+          },
+          "premature_approval_rate": {
+            "count": 0,
+            "n": 768,
+            "rate": 0.0
+          },
+          "excessive_ask_rate": {
+            "count": 61,
+            "n": 672,
+            "rate": 9.08
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 61,
+            "n": 288,
+            "rate": 21.18
+          },
+          "corrupt_action_success_rate": {
+            "count": 0,
+            "n": 960,
+            "rate": 0.0
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 46,
+              "n": 61,
+              "rate": 75.41
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 0,
+              "n": 0,
+              "rate": 0.0
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 92.19,
+              "action_accuracy": 92.19,
+              "full_accuracy": 92.19
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 88.75,
+              "action_accuracy": 88.75,
+              "full_accuracy": 88.75
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 87.29,
+              "action_accuracy": 87.29,
+              "full_accuracy": 87.29
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 86.98,
+              "action_accuracy": 86.98,
+              "full_accuracy": 86.98
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 62.5,
+              "action_accuracy": 62.5,
+              "full_accuracy": 62.5
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 39,
+              "n": 96,
+              "accuracy": 40.62
+            },
+            "closed_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 92,
+              "n": 96,
+              "accuracy": 95.83
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            }
+          },
+          "error_types": {
+            "correct": 899,
+            "excessive_ask_under_closure_false": 61
+          },
+          "repeat": 1,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_deepseek-pro_repeat_1_scored.jsonl"
+        },
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "deepseek-v4-pro"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "json_valid": {
+            "n": 957,
+            "rate": 99.69
+          },
+          "truth_accuracy": {
+            "correct": 896,
+            "n": 960,
+            "accuracy": 93.33
+          },
+          "action_accuracy": {
+            "correct": 896,
+            "n": 960,
+            "accuracy": 93.33
+          },
+          "full_decision_accuracy": {
+            "correct": 896,
+            "n": 960,
+            "accuracy": 93.33
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 282,
+            "n": 320,
+            "accuracy": 88.12
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 282,
+            "n": 320,
+            "accuracy": 88.12
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 154,
+            "n": 192,
+            "accuracy": 80.21
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 154,
+            "n": 192,
+            "accuracy": 80.21
+          },
+          "ask_metrics": {
+            "true_positive": 288,
+            "model_asks": 352,
+            "gold_asks": 288,
+            "precision": 81.82,
+            "recall": 100.0,
+            "f1": 90.0
+          },
+          "targeted_information_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "closure_denial_accuracy": {
+            "correct": 224,
+            "n": 288,
+            "accuracy": 77.78
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "internal_action_consistency": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "premature_denial_rate": {
+            "count": 0,
+            "n": 288,
+            "rate": 0.0
+          },
+          "premature_approval_rate": {
+            "count": 0,
+            "n": 768,
+            "rate": 0.0
+          },
+          "excessive_ask_rate": {
+            "count": 64,
+            "n": 672,
+            "rate": 9.52
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 64,
+            "n": 288,
+            "rate": 22.22
+          },
+          "corrupt_action_success_rate": {
+            "count": 0,
+            "n": 960,
+            "rate": 0.0
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 56,
+              "n": 64,
+              "rate": 87.5
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 0,
+              "n": 0,
+              "rate": 0.0
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 91.88,
+              "action_accuracy": 91.88,
+              "full_accuracy": 91.88
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 88.12,
+              "action_accuracy": 88.12,
+              "full_accuracy": 88.12
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 86.67,
+              "action_accuracy": 86.67,
+              "full_accuracy": 86.67
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 86.46,
+              "action_accuracy": 86.46,
+              "full_accuracy": 86.46
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 60.42,
+              "action_accuracy": 60.42,
+              "full_accuracy": 60.42
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 38,
+              "n": 96,
+              "accuracy": 39.58
+            },
+            "closed_missing_direct": {
+              "correct": 94,
+              "n": 96,
+              "accuracy": 97.92
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 92,
+              "n": 96,
+              "accuracy": 95.83
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            }
+          },
+          "error_types": {
+            "correct": 896,
+            "excessive_ask_under_closure_false": 64
+          },
+          "repeat": 2,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_deepseek-pro_repeat_2_scored.jsonl"
+        },
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "deepseek-v4-pro"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "json_valid": {
+            "n": 957,
+            "rate": 99.69
+          },
+          "truth_accuracy": {
+            "correct": 897,
+            "n": 960,
+            "accuracy": 93.44
+          },
+          "action_accuracy": {
+            "correct": 897,
+            "n": 960,
+            "accuracy": 93.44
+          },
+          "full_decision_accuracy": {
+            "correct": 897,
+            "n": 960,
+            "accuracy": 93.44
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 283,
+            "n": 320,
+            "accuracy": 88.44
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 283,
+            "n": 320,
+            "accuracy": 88.44
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 155,
+            "n": 192,
+            "accuracy": 80.73
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 155,
+            "n": 192,
+            "accuracy": 80.73
+          },
+          "ask_metrics": {
+            "true_positive": 288,
+            "model_asks": 351,
+            "gold_asks": 288,
+            "precision": 82.05,
+            "recall": 100.0,
+            "f1": 90.14
+          },
+          "targeted_information_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "closure_denial_accuracy": {
+            "correct": 225,
+            "n": 288,
+            "accuracy": 78.12
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "internal_action_consistency": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "premature_denial_rate": {
+            "count": 0,
+            "n": 288,
+            "rate": 0.0
+          },
+          "premature_approval_rate": {
+            "count": 0,
+            "n": 768,
+            "rate": 0.0
+          },
+          "excessive_ask_rate": {
+            "count": 63,
+            "n": 672,
+            "rate": 9.38
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 63,
+            "n": 288,
+            "rate": 21.88
+          },
+          "corrupt_action_success_rate": {
+            "count": 0,
+            "n": 960,
+            "rate": 0.0
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 53,
+              "n": 63,
+              "rate": 84.13
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 0,
+              "n": 0,
+              "rate": 0.0
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 91.88,
+              "action_accuracy": 91.88,
+              "full_accuracy": 91.88
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 88.44,
+              "action_accuracy": 88.44,
+              "full_accuracy": 88.44
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 86.88,
+              "action_accuracy": 86.88,
+              "full_accuracy": 86.88
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 86.46,
+              "action_accuracy": 86.46,
+              "full_accuracy": 86.46
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 61.46,
+              "action_accuracy": 61.46,
+              "full_accuracy": 61.46
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 38,
+              "n": 96,
+              "accuracy": 39.58
+            },
+            "closed_missing_direct": {
+              "correct": 95,
+              "n": 96,
+              "accuracy": 98.96
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 92,
+              "n": 96,
+              "accuracy": 95.83
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            }
+          },
+          "error_types": {
+            "correct": 897,
+            "excessive_ask_under_closure_false": 63
+          },
+          "repeat": 3,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_deepseek-pro_repeat_3_scored.jsonl"
+        }
+      ],
+      "metrics": {
+        "action_accuracy": {
+          "mean": 93.47,
+          "sd": 0.16,
+          "ci95_half_width": 0.4,
+          "min": 93.33,
+          "max": 93.65,
+          "values": [
+            93.65,
+            93.33,
+            93.44
+          ]
+        },
+        "full_decision_accuracy": {
+          "mean": 93.47,
+          "sd": 0.16,
+          "ci95_half_width": 0.4,
+          "min": 93.33,
+          "max": 93.65,
+          "values": [
+            93.65,
+            93.33,
+            93.44
+          ]
+        },
+        "semantic_switch_action_accuracy": {
+          "mean": 88.44,
+          "sd": 0.32,
+          "ci95_half_width": 0.78,
+          "min": 88.12,
+          "max": 88.75,
+          "values": [
+            88.75,
+            88.12,
+            88.44
+          ]
+        },
+        "core_semantic_switch_action_accuracy": {
+          "mean": 80.73,
+          "sd": 0.52,
+          "ci95_half_width": 1.29,
+          "min": 80.21,
+          "max": 81.25,
+          "values": [
+            81.25,
+            80.21,
+            80.73
+          ]
+        },
+        "ask_precision": {
+          "mean": 82.13,
+          "sd": 0.36,
+          "ci95_half_width": 0.89,
+          "min": 81.82,
+          "max": 82.52,
+          "values": [
+            82.52,
+            81.82,
+            82.05
+          ]
+        },
+        "ask_recall": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "ask_f1": {
+          "mean": 90.19,
+          "sd": 0.21,
+          "ci95_half_width": 0.53,
+          "min": 90.0,
+          "max": 90.42,
+          "values": [
+            90.42,
+            90.0,
+            90.14
+          ]
+        },
+        "closure_denial_accuracy": {
+          "mean": 78.24,
+          "sd": 0.53,
+          "ci95_half_width": 1.32,
+          "min": 77.78,
+          "max": 78.82,
+          "values": [
+            78.82,
+            77.78,
+            78.12
+          ]
+        },
+        "unresolved_ask_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "excessive_ask_on_closure_false_rate": {
+          "mean": 21.76,
+          "sd": 0.53,
+          "ci95_half_width": 1.32,
+          "min": 21.18,
+          "max": 22.22,
+          "values": [
+            21.18,
+            22.22,
+            21.88
+          ]
+        },
+        "premature_denial_rate": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "item_decision_consistency": {
+        "n": 960,
+        "consistent": 948,
+        "rate": 98.75
+      },
+      "mean_parse_failures": 0.0,
+      "mean_api_errors": 0.0
+    },
+    "llama-maverick": {
+      "model": "meta-llama/llama-4-maverick",
+      "n_repeats": 3,
+      "replicates": [
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "meta-llama/llama-4-maverick"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "json_valid": {
+            "n": 0,
+            "rate": 0.0
+          },
+          "truth_accuracy": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "action_accuracy": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "full_decision_accuracy": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 192,
+            "n": 192,
+            "accuracy": 100.0
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 192,
+            "n": 192,
+            "accuracy": 100.0
+          },
+          "ask_metrics": {
+            "true_positive": 288,
+            "model_asks": 288,
+            "gold_asks": 288,
+            "precision": 100.0,
+            "recall": 100.0,
+            "f1": 100.0
+          },
+          "targeted_information_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "closure_denial_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "internal_action_consistency": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "premature_denial_rate": {
+            "count": 0,
+            "n": 288,
+            "rate": 0.0
+          },
+          "premature_approval_rate": {
+            "count": 0,
+            "n": 768,
+            "rate": 0.0
+          },
+          "excessive_ask_rate": {
+            "count": 0,
+            "n": 672,
+            "rate": 0.0
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 0,
+            "n": 288,
+            "rate": 0.0
+          },
+          "corrupt_action_success_rate": {
+            "count": 0,
+            "n": 960,
+            "rate": 0.0
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 0,
+              "n": 0,
+              "rate": 0.0
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 0,
+              "n": 0,
+              "rate": 0.0
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "closed_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            }
+          },
+          "error_types": {
+            "correct": 960
+          },
+          "repeat": 1,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_llama-maverick_repeat_1_scored.jsonl"
+        },
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "meta-llama/llama-4-maverick"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "json_valid": {
+            "n": 0,
+            "rate": 0.0
+          },
+          "truth_accuracy": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "action_accuracy": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "full_decision_accuracy": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 192,
+            "n": 192,
+            "accuracy": 100.0
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 192,
+            "n": 192,
+            "accuracy": 100.0
+          },
+          "ask_metrics": {
+            "true_positive": 288,
+            "model_asks": 288,
+            "gold_asks": 288,
+            "precision": 100.0,
+            "recall": 100.0,
+            "f1": 100.0
+          },
+          "targeted_information_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "closure_denial_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "internal_action_consistency": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "premature_denial_rate": {
+            "count": 0,
+            "n": 288,
+            "rate": 0.0
+          },
+          "premature_approval_rate": {
+            "count": 0,
+            "n": 768,
+            "rate": 0.0
+          },
+          "excessive_ask_rate": {
+            "count": 0,
+            "n": 672,
+            "rate": 0.0
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 0,
+            "n": 288,
+            "rate": 0.0
+          },
+          "corrupt_action_success_rate": {
+            "count": 0,
+            "n": 960,
+            "rate": 0.0
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 0,
+              "n": 0,
+              "rate": 0.0
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 0,
+              "n": 0,
+              "rate": 0.0
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "closed_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            }
+          },
+          "error_types": {
+            "correct": 960
+          },
+          "repeat": 2,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_llama-maverick_repeat_2_scored.jsonl"
+        },
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "meta-llama/llama-4-maverick"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "json_valid": {
+            "n": 0,
+            "rate": 0.0
+          },
+          "truth_accuracy": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "action_accuracy": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "full_decision_accuracy": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 320,
+            "n": 320,
+            "accuracy": 100.0
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 192,
+            "n": 192,
+            "accuracy": 100.0
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 192,
+            "n": 192,
+            "accuracy": 100.0
+          },
+          "ask_metrics": {
+            "true_positive": 288,
+            "model_asks": 288,
+            "gold_asks": 288,
+            "precision": 100.0,
+            "recall": 100.0,
+            "f1": 100.0
+          },
+          "targeted_information_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "closure_denial_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "internal_action_consistency": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "premature_denial_rate": {
+            "count": 0,
+            "n": 288,
+            "rate": 0.0
+          },
+          "premature_approval_rate": {
+            "count": 0,
+            "n": 768,
+            "rate": 0.0
+          },
+          "excessive_ask_rate": {
+            "count": 0,
+            "n": 672,
+            "rate": 0.0
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 0,
+            "n": 288,
+            "rate": 0.0
+          },
+          "corrupt_action_success_rate": {
+            "count": 0,
+            "n": 960,
+            "rate": 0.0
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 0,
+              "n": 0,
+              "rate": 0.0
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 0,
+              "n": 0,
+              "rate": 0.0
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "closed_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            }
+          },
+          "error_types": {
+            "correct": 960
+          },
+          "repeat": 3,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_llama-maverick_repeat_3_scored.jsonl"
+        }
+      ],
+      "metrics": {
+        "action_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "full_decision_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "semantic_switch_action_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "core_semantic_switch_action_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "ask_precision": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "ask_recall": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "ask_f1": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "closure_denial_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "unresolved_ask_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "excessive_ask_on_closure_false_rate": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "premature_denial_rate": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "item_decision_consistency": {
+        "n": 960,
+        "consistent": 960,
+        "rate": 100.0
+      },
+      "mean_parse_failures": 0.0,
+      "mean_api_errors": 0.0
+    },
+    "llama-scout": {
+      "model": "meta-llama/llama-4-scout",
+      "n_repeats": 3,
+      "replicates": [
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "meta-llama/llama-4-scout"
+          ],
+          "api_errors": 0,
+          "parse_failures": 13,
+          "json_valid": {
+            "n": 703,
+            "rate": 73.23
+          },
+          "truth_accuracy": {
+            "correct": 692,
+            "n": 960,
+            "accuracy": 72.08
+          },
+          "action_accuracy": {
+            "correct": 684,
+            "n": 960,
+            "accuracy": 71.25
+          },
+          "full_decision_accuracy": {
+            "correct": 681,
+            "n": 960,
+            "accuracy": 70.94
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 148,
+            "n": 320,
+            "accuracy": 46.25
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 146,
+            "n": 320,
+            "accuracy": 45.62
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 23,
+            "n": 192,
+            "accuracy": 11.98
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 23,
+            "n": 192,
+            "accuracy": 11.98
+          },
+          "ask_metrics": {
+            "true_positive": 160,
+            "model_asks": 288,
+            "gold_asks": 288,
+            "precision": 55.56,
+            "recall": 55.56,
+            "f1": 55.56
+          },
+          "targeted_information_accuracy": {
+            "correct": 160,
+            "n": 288,
+            "accuracy": 55.56
+          },
+          "closure_denial_accuracy": {
+            "correct": 143,
+            "n": 288,
+            "accuracy": 49.65
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 160,
+            "n": 288,
+            "accuracy": 55.56
+          },
+          "internal_action_consistency": {
+            "correct": 943,
+            "n": 960,
+            "accuracy": 98.23
+          },
+          "premature_denial_rate": {
+            "count": 121,
+            "n": 288,
+            "rate": 42.01
+          },
+          "premature_approval_rate": {
+            "count": 16,
+            "n": 768,
+            "rate": 2.08
+          },
+          "excessive_ask_rate": {
+            "count": 128,
+            "n": 672,
+            "rate": 19.05
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 128,
+            "n": 288,
+            "rate": 44.44
+          },
+          "corrupt_action_success_rate": {
+            "count": 1,
+            "n": 960,
+            "rate": 0.1
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 0,
+              "n": 145,
+              "rate": 0.0
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 2,
+              "n": 129,
+              "rate": 1.55
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 82.19,
+              "action_accuracy": 80.62,
+              "full_accuracy": 80.31
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 47.19,
+              "action_accuracy": 47.19,
+              "full_accuracy": 46.88
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 86.88,
+              "action_accuracy": 85.94,
+              "full_accuracy": 85.62
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 99.48,
+              "action_accuracy": 98.44,
+              "full_accuracy": 97.92
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 70.62,
+              "action_accuracy": 69.79,
+              "full_accuracy": 69.58
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 56.25,
+              "action_accuracy": 55.56,
+              "full_accuracy": 55.21
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 99.48,
+              "action_accuracy": 98.44,
+              "full_accuracy": 97.92
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 99.48,
+              "action_accuracy": 100.0,
+              "full_accuracy": 99.48
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 70.31,
+              "action_accuracy": 67.71,
+              "full_accuracy": 67.71
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 13.54,
+              "action_accuracy": 13.54,
+              "full_accuracy": 13.54
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 11.46,
+              "action_accuracy": 11.46,
+              "full_accuracy": 11.46
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 78.65,
+              "action_accuracy": 77.6,
+              "full_accuracy": 77.08
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 31,
+              "n": 96,
+              "accuracy": 32.29
+            },
+            "closed_missing_direct": {
+              "correct": 45,
+              "n": 96,
+              "accuracy": 46.88
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 69,
+              "n": 96,
+              "accuracy": 71.88
+            },
+            "entailed_closed_conclusion": {
+              "correct": 94,
+              "n": 96,
+              "accuracy": 97.92
+            },
+            "entailed_open_conclusion": {
+              "correct": 95,
+              "n": 96,
+              "accuracy": 98.96
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 37,
+              "n": 96,
+              "accuracy": 38.54
+            },
+            "open_missing_direct": {
+              "correct": 55,
+              "n": 96,
+              "accuracy": 57.29
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 66,
+              "n": 96,
+              "accuracy": 68.75
+            }
+          },
+          "error_types": {
+            "correct": 681,
+            "parse_failure": 4,
+            "premature_denial_from_unresolved_absence": 121,
+            "truth_correct_action_wrong": 9,
+            "excessive_ask_under_closure_false": 128,
+            "corrupt_action_success_truth_wrong": 1,
+            "missed_closure_denial": 10,
+            "premature_approval_from_unresolved_absence": 4,
+            "other_decision_error": 1,
+            "untargeted_or_wrong_information_request": 1
+          },
+          "repeat": 1,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_llama-scout_repeat_1_scored.jsonl"
+        },
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "meta-llama/llama-4-scout"
+          ],
+          "api_errors": 0,
+          "parse_failures": 11,
+          "json_valid": {
+            "n": 676,
+            "rate": 70.42
+          },
+          "truth_accuracy": {
+            "correct": 694,
+            "n": 960,
+            "accuracy": 72.29
+          },
+          "action_accuracy": {
+            "correct": 696,
+            "n": 960,
+            "accuracy": 72.5
+          },
+          "full_decision_accuracy": {
+            "correct": 687,
+            "n": 960,
+            "accuracy": 71.56
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 155,
+            "n": 320,
+            "accuracy": 48.44
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 148,
+            "n": 320,
+            "accuracy": 46.25
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 27,
+            "n": 192,
+            "accuracy": 14.06
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 23,
+            "n": 192,
+            "accuracy": 11.98
+          },
+          "ask_metrics": {
+            "true_positive": 163,
+            "model_asks": 291,
+            "gold_asks": 288,
+            "precision": 56.01,
+            "recall": 56.6,
+            "f1": 56.3
+          },
+          "targeted_information_accuracy": {
+            "correct": 160,
+            "n": 288,
+            "accuracy": 55.56
+          },
+          "closure_denial_accuracy": {
+            "correct": 149,
+            "n": 288,
+            "accuracy": 51.74
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 163,
+            "n": 288,
+            "accuracy": 56.6
+          },
+          "internal_action_consistency": {
+            "correct": 945,
+            "n": 960,
+            "accuracy": 98.44
+          },
+          "premature_denial_rate": {
+            "count": 118,
+            "n": 288,
+            "rate": 40.97
+          },
+          "premature_approval_rate": {
+            "count": 14,
+            "n": 768,
+            "rate": 1.82
+          },
+          "excessive_ask_rate": {
+            "count": 128,
+            "n": 672,
+            "rate": 19.05
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 128,
+            "n": 288,
+            "rate": 44.44
+          },
+          "corrupt_action_success_rate": {
+            "count": 4,
+            "n": 960,
+            "rate": 0.42
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 0,
+              "n": 140,
+              "rate": 0.0
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 2,
+              "n": 130,
+              "rate": 1.54
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 81.88,
+              "action_accuracy": 81.56,
+              "full_accuracy": 80.94
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 49.38,
+              "action_accuracy": 49.69,
+              "full_accuracy": 49.38
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 85.62,
+              "action_accuracy": 86.25,
+              "full_accuracy": 84.38
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 71.04,
+              "action_accuracy": 71.04,
+              "full_accuracy": 70.21
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 55.9,
+              "action_accuracy": 56.6,
+              "full_accuracy": 54.86
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 99.48,
+              "action_accuracy": 100.0,
+              "full_accuracy": 98.44
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 70.31,
+              "action_accuracy": 69.27,
+              "full_accuracy": 69.27
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 15.62,
+              "action_accuracy": 16.67,
+              "full_accuracy": 15.62
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 15.62,
+              "action_accuracy": 15.62,
+              "full_accuracy": 15.62
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 76.04,
+              "action_accuracy": 77.08,
+              "full_accuracy": 74.48
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 33,
+              "n": 96,
+              "accuracy": 34.38
+            },
+            "closed_missing_direct": {
+              "correct": 50,
+              "n": 96,
+              "accuracy": 52.08
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 66,
+              "n": 96,
+              "accuracy": 68.75
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 36,
+              "n": 96,
+              "accuracy": 37.5
+            },
+            "open_missing_direct": {
+              "correct": 60,
+              "n": 96,
+              "accuracy": 62.5
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 67,
+              "n": 96,
+              "accuracy": 69.79
+            }
+          },
+          "error_types": {
+            "correct": 687,
+            "excessive_ask_under_closure_false": 128,
+            "premature_denial_from_unresolved_absence": 118,
+            "truth_correct_action_wrong": 2,
+            "other_decision_error": 5,
+            "corrupt_action_success_truth_wrong": 4,
+            "missed_closure_denial": 9,
+            "premature_approval_from_unresolved_absence": 5,
+            "untargeted_or_wrong_information_request": 1,
+            "parse_failure": 1
+          },
+          "repeat": 2,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_llama-scout_repeat_2_scored.jsonl"
+        },
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "meta-llama/llama-4-scout"
+          ],
+          "api_errors": 0,
+          "parse_failures": 12,
+          "json_valid": {
+            "n": 680,
+            "rate": 70.83
+          },
+          "truth_accuracy": {
+            "correct": 682,
+            "n": 960,
+            "accuracy": 71.04
+          },
+          "action_accuracy": {
+            "correct": 683,
+            "n": 960,
+            "accuracy": 71.15
+          },
+          "full_decision_accuracy": {
+            "correct": 676,
+            "n": 960,
+            "accuracy": 70.42
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 145,
+            "n": 320,
+            "accuracy": 45.31
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 142,
+            "n": 320,
+            "accuracy": 44.38
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 21,
+            "n": 192,
+            "accuracy": 10.94
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 21,
+            "n": 192,
+            "accuracy": 10.94
+          },
+          "ask_metrics": {
+            "true_positive": 162,
+            "model_asks": 300,
+            "gold_asks": 288,
+            "precision": 54.0,
+            "recall": 56.25,
+            "f1": 55.1
+          },
+          "targeted_information_accuracy": {
+            "correct": 160,
+            "n": 288,
+            "accuracy": 55.56
+          },
+          "closure_denial_accuracy": {
+            "correct": 141,
+            "n": 288,
+            "accuracy": 48.96
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 162,
+            "n": 288,
+            "accuracy": 56.25
+          },
+          "internal_action_consistency": {
+            "correct": 945,
+            "n": 960,
+            "accuracy": 98.44
+          },
+          "premature_denial_rate": {
+            "count": 122,
+            "n": 288,
+            "rate": 42.36
+          },
+          "premature_approval_rate": {
+            "count": 12,
+            "n": 768,
+            "rate": 1.56
+          },
+          "excessive_ask_rate": {
+            "count": 138,
+            "n": 672,
+            "rate": 20.54
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 138,
+            "n": 288,
+            "rate": 47.92
+          },
+          "corrupt_action_success_rate": {
+            "count": 5,
+            "n": 960,
+            "rate": 0.52
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 0,
+              "n": 147,
+              "rate": 0.0
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 3,
+              "n": 130,
+              "rate": 2.31
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 80.62,
+              "action_accuracy": 80.0,
+              "full_accuracy": 80.0
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 46.88,
+              "action_accuracy": 46.88,
+              "full_accuracy": 46.56
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 85.62,
+              "action_accuracy": 86.56,
+              "full_accuracy": 84.69
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 98.96,
+              "action_accuracy": 100.0,
+              "full_accuracy": 98.96
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 69.17,
+              "action_accuracy": 68.54,
+              "full_accuracy": 68.33
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 55.56,
+              "action_accuracy": 56.25,
+              "full_accuracy": 54.86
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 98.96,
+              "action_accuracy": 100.0,
+              "full_accuracy": 98.96
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 98.96,
+              "action_accuracy": 97.92,
+              "full_accuracy": 97.4
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 67.71,
+              "action_accuracy": 67.19,
+              "full_accuracy": 67.19
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 12.5,
+              "action_accuracy": 12.5,
+              "full_accuracy": 12.5
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 12.5,
+              "action_accuracy": 12.5,
+              "full_accuracy": 12.5
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 77.08,
+              "action_accuracy": 78.12,
+              "full_accuracy": 76.04
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 32,
+              "n": 96,
+              "accuracy": 33.33
+            },
+            "closed_missing_direct": {
+              "correct": 52,
+              "n": 96,
+              "accuracy": 54.17
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 58,
+              "n": 96,
+              "accuracy": 60.42
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_closed": {
+              "correct": 94,
+              "n": 96,
+              "accuracy": 97.92
+            },
+            "explicit_negative_open": {
+              "correct": 94,
+              "n": 96,
+              "accuracy": 97.92
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 39,
+              "n": 96,
+              "accuracy": 40.62
+            },
+            "open_missing_direct": {
+              "correct": 60,
+              "n": 96,
+              "accuracy": 62.5
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 62,
+              "n": 96,
+              "accuracy": 64.58
+            }
+          },
+          "error_types": {
+            "correct": 676,
+            "excessive_ask_under_closure_false": 138,
+            "premature_denial_from_unresolved_absence": 122,
+            "truth_correct_action_wrong": 4,
+            "corrupt_action_success_truth_wrong": 5,
+            "premature_approval_from_unresolved_absence": 3,
+            "missed_closure_denial": 8,
+            "untargeted_or_wrong_information_request": 2,
+            "parse_failure": 2
+          },
+          "repeat": 3,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_llama-scout_repeat_3_scored.jsonl"
+        }
+      ],
+      "metrics": {
+        "action_accuracy": {
+          "mean": 71.63,
+          "sd": 0.75,
+          "ci95_half_width": 1.87,
+          "min": 71.15,
+          "max": 72.5,
+          "values": [
+            71.25,
+            72.5,
+            71.15
+          ]
+        },
+        "full_decision_accuracy": {
+          "mean": 70.97,
+          "sd": 0.57,
+          "ci95_half_width": 1.42,
+          "min": 70.42,
+          "max": 71.56,
+          "values": [
+            70.94,
+            71.56,
+            70.42
+          ]
+        },
+        "semantic_switch_action_accuracy": {
+          "mean": 46.67,
+          "sd": 1.61,
+          "ci95_half_width": 3.99,
+          "min": 45.31,
+          "max": 48.44,
+          "values": [
+            46.25,
+            48.44,
+            45.31
+          ]
+        },
+        "core_semantic_switch_action_accuracy": {
+          "mean": 12.33,
+          "sd": 1.59,
+          "ci95_half_width": 3.95,
+          "min": 10.94,
+          "max": 14.06,
+          "values": [
+            11.98,
+            14.06,
+            10.94
+          ]
+        },
+        "ask_precision": {
+          "mean": 55.19,
+          "sd": 1.05,
+          "ci95_half_width": 2.62,
+          "min": 54.0,
+          "max": 56.01,
+          "values": [
+            55.56,
+            56.01,
+            54.0
+          ]
+        },
+        "ask_recall": {
+          "mean": 56.14,
+          "sd": 0.53,
+          "ci95_half_width": 1.31,
+          "min": 55.56,
+          "max": 56.6,
+          "values": [
+            55.56,
+            56.6,
+            56.25
+          ]
+        },
+        "ask_f1": {
+          "mean": 55.65,
+          "sd": 0.61,
+          "ci95_half_width": 1.5,
+          "min": 55.1,
+          "max": 56.3,
+          "values": [
+            55.56,
+            56.3,
+            55.1
+          ]
+        },
+        "closure_denial_accuracy": {
+          "mean": 50.12,
+          "sd": 1.45,
+          "ci95_half_width": 3.6,
+          "min": 48.96,
+          "max": 51.74,
+          "values": [
+            49.65,
+            51.74,
+            48.96
+          ]
+        },
+        "unresolved_ask_accuracy": {
+          "mean": 56.14,
+          "sd": 0.53,
+          "ci95_half_width": 1.31,
+          "min": 55.56,
+          "max": 56.6,
+          "values": [
+            55.56,
+            56.6,
+            56.25
+          ]
+        },
+        "excessive_ask_on_closure_false_rate": {
+          "mean": 45.6,
+          "sd": 2.01,
+          "ci95_half_width": 4.99,
+          "min": 44.44,
+          "max": 47.92,
+          "values": [
+            44.44,
+            44.44,
+            47.92
+          ]
+        },
+        "premature_denial_rate": {
+          "mean": 41.78,
+          "sd": 0.72,
+          "ci95_half_width": 1.8,
+          "min": 40.97,
+          "max": 42.36,
+          "values": [
+            42.01,
+            40.97,
+            42.36
+          ]
+        }
+      },
+      "item_decision_consistency": {
+        "n": 960,
+        "consistent": 812,
+        "rate": 84.58
+      },
+      "mean_parse_failures": 12.0,
+      "mean_api_errors": 0.0
+    },
+    "mistral-medium": {
+      "model": "mistralai/mistral-medium-3-5",
+      "n_repeats": 3,
+      "replicates": [
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "mistralai/mistral-medium-3-5"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "json_valid": {
+            "n": 960,
+            "rate": 100.0
+          },
+          "truth_accuracy": {
+            "correct": 894,
+            "n": 960,
+            "accuracy": 93.12
+          },
+          "action_accuracy": {
+            "correct": 894,
+            "n": 960,
+            "accuracy": 93.12
+          },
+          "full_decision_accuracy": {
+            "correct": 894,
+            "n": 960,
+            "accuracy": 93.12
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 269,
+            "n": 320,
+            "accuracy": 84.06
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 269,
+            "n": 320,
+            "accuracy": 84.06
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 141,
+            "n": 192,
+            "accuracy": 73.44
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 141,
+            "n": 192,
+            "accuracy": 73.44
+          },
+          "ask_metrics": {
+            "true_positive": 288,
+            "model_asks": 354,
+            "gold_asks": 288,
+            "precision": 81.36,
+            "recall": 100.0,
+            "f1": 89.72
+          },
+          "targeted_information_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "closure_denial_accuracy": {
+            "correct": 222,
+            "n": 288,
+            "accuracy": 77.08
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "internal_action_consistency": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "premature_denial_rate": {
+            "count": 0,
+            "n": 288,
+            "rate": 0.0
+          },
+          "premature_approval_rate": {
+            "count": 0,
+            "n": 768,
+            "rate": 0.0
+          },
+          "excessive_ask_rate": {
+            "count": 66,
+            "n": 672,
+            "rate": 9.82
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 66,
+            "n": 288,
+            "rate": 22.92
+          },
+          "corrupt_action_success_rate": {
+            "count": 0,
+            "n": 960,
+            "rate": 0.0
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 6,
+              "n": 66,
+              "rate": 9.09
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 0,
+              "n": 0,
+              "rate": 0.0
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 95.31,
+              "action_accuracy": 95.31,
+              "full_accuracy": 95.31
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 84.06,
+              "action_accuracy": 84.06,
+              "full_accuracy": 84.06
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 86.25,
+              "action_accuracy": 86.25,
+              "full_accuracy": 86.25
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 92.19,
+              "action_accuracy": 92.19,
+              "full_accuracy": 92.19
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 46.88,
+              "action_accuracy": 46.88,
+              "full_accuracy": 46.88
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 49,
+              "n": 96,
+              "accuracy": 51.04
+            },
+            "closed_missing_direct": {
+              "correct": 87,
+              "n": 96,
+              "accuracy": 90.62
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 86,
+              "n": 96,
+              "accuracy": 89.58
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            }
+          },
+          "error_types": {
+            "correct": 894,
+            "excessive_ask_under_closure_false": 66
+          },
+          "repeat": 1,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_mistral-medium_repeat_1_scored.jsonl"
+        },
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "mistralai/mistral-medium-3-5"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "json_valid": {
+            "n": 960,
+            "rate": 100.0
+          },
+          "truth_accuracy": {
+            "correct": 891,
+            "n": 960,
+            "accuracy": 92.81
+          },
+          "action_accuracy": {
+            "correct": 891,
+            "n": 960,
+            "accuracy": 92.81
+          },
+          "full_decision_accuracy": {
+            "correct": 891,
+            "n": 960,
+            "accuracy": 92.81
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 267,
+            "n": 320,
+            "accuracy": 83.44
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 267,
+            "n": 320,
+            "accuracy": 83.44
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 139,
+            "n": 192,
+            "accuracy": 72.4
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 139,
+            "n": 192,
+            "accuracy": 72.4
+          },
+          "ask_metrics": {
+            "true_positive": 288,
+            "model_asks": 357,
+            "gold_asks": 288,
+            "precision": 80.67,
+            "recall": 100.0,
+            "f1": 89.3
+          },
+          "targeted_information_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "closure_denial_accuracy": {
+            "correct": 219,
+            "n": 288,
+            "accuracy": 76.04
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "internal_action_consistency": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "premature_denial_rate": {
+            "count": 0,
+            "n": 288,
+            "rate": 0.0
+          },
+          "premature_approval_rate": {
+            "count": 0,
+            "n": 768,
+            "rate": 0.0
+          },
+          "excessive_ask_rate": {
+            "count": 69,
+            "n": 672,
+            "rate": 10.27
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 69,
+            "n": 288,
+            "rate": 23.96
+          },
+          "corrupt_action_success_rate": {
+            "count": 0,
+            "n": 960,
+            "rate": 0.0
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 7,
+              "n": 69,
+              "rate": 10.14
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 0,
+              "n": 0,
+              "rate": 0.0
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 95.0,
+              "action_accuracy": 95.0,
+              "full_accuracy": 95.0
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 83.44,
+              "action_accuracy": 83.44,
+              "full_accuracy": 83.44
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 85.62,
+              "action_accuracy": 85.62,
+              "full_accuracy": 85.62
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 91.67,
+              "action_accuracy": 91.67,
+              "full_accuracy": 91.67
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 44.79,
+              "action_accuracy": 44.79,
+              "full_accuracy": 44.79
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 48,
+              "n": 96,
+              "accuracy": 50.0
+            },
+            "closed_missing_direct": {
+              "correct": 84,
+              "n": 96,
+              "accuracy": 87.5
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 87,
+              "n": 96,
+              "accuracy": 90.62
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            }
+          },
+          "error_types": {
+            "correct": 891,
+            "excessive_ask_under_closure_false": 69
+          },
+          "repeat": 2,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_mistral-medium_repeat_2_scored.jsonl"
+        },
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "mistralai/mistral-medium-3-5"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "json_valid": {
+            "n": 960,
+            "rate": 100.0
+          },
+          "truth_accuracy": {
+            "correct": 893,
+            "n": 960,
+            "accuracy": 93.02
+          },
+          "action_accuracy": {
+            "correct": 893,
+            "n": 960,
+            "accuracy": 93.02
+          },
+          "full_decision_accuracy": {
+            "correct": 893,
+            "n": 960,
+            "accuracy": 93.02
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 266,
+            "n": 320,
+            "accuracy": 83.12
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 266,
+            "n": 320,
+            "accuracy": 83.12
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 138,
+            "n": 192,
+            "accuracy": 71.88
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 138,
+            "n": 192,
+            "accuracy": 71.88
+          },
+          "ask_metrics": {
+            "true_positive": 288,
+            "model_asks": 355,
+            "gold_asks": 288,
+            "precision": 81.13,
+            "recall": 100.0,
+            "f1": 89.58
+          },
+          "targeted_information_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "closure_denial_accuracy": {
+            "correct": 221,
+            "n": 288,
+            "accuracy": 76.74
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 288,
+            "n": 288,
+            "accuracy": 100.0
+          },
+          "internal_action_consistency": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "premature_denial_rate": {
+            "count": 0,
+            "n": 288,
+            "rate": 0.0
+          },
+          "premature_approval_rate": {
+            "count": 0,
+            "n": 768,
+            "rate": 0.0
+          },
+          "excessive_ask_rate": {
+            "count": 67,
+            "n": 672,
+            "rate": 9.97
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 67,
+            "n": 288,
+            "rate": 23.26
+          },
+          "corrupt_action_success_rate": {
+            "count": 0,
+            "n": 960,
+            "rate": 0.0
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 7,
+              "n": 67,
+              "rate": 10.45
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 0,
+              "n": 0,
+              "rate": 0.0
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 95.94,
+              "action_accuracy": 95.94,
+              "full_accuracy": 95.94
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 83.12,
+              "action_accuracy": 83.12,
+              "full_accuracy": 83.12
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 86.04,
+              "action_accuracy": 86.04,
+              "full_accuracy": 86.04
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 93.23,
+              "action_accuracy": 93.23,
+              "full_accuracy": 93.23
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 43.75,
+              "action_accuracy": 43.75,
+              "full_accuracy": 43.75
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 51,
+              "n": 96,
+              "accuracy": 53.12
+            },
+            "closed_missing_direct": {
+              "correct": 85,
+              "n": 96,
+              "accuracy": 88.54
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 85,
+              "n": 96,
+              "accuracy": 88.54
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_direct": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            }
+          },
+          "error_types": {
+            "correct": 893,
+            "excessive_ask_under_closure_false": 67
+          },
+          "repeat": 3,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_mistral-medium_repeat_3_scored.jsonl"
+        }
+      ],
+      "metrics": {
+        "action_accuracy": {
+          "mean": 92.98,
+          "sd": 0.16,
+          "ci95_half_width": 0.39,
+          "min": 92.81,
+          "max": 93.12,
+          "values": [
+            93.12,
+            92.81,
+            93.02
+          ]
+        },
+        "full_decision_accuracy": {
+          "mean": 92.98,
+          "sd": 0.16,
+          "ci95_half_width": 0.39,
+          "min": 92.81,
+          "max": 93.12,
+          "values": [
+            93.12,
+            92.81,
+            93.02
+          ]
+        },
+        "semantic_switch_action_accuracy": {
+          "mean": 83.54,
+          "sd": 0.48,
+          "ci95_half_width": 1.19,
+          "min": 83.12,
+          "max": 84.06,
+          "values": [
+            84.06,
+            83.44,
+            83.12
+          ]
+        },
+        "core_semantic_switch_action_accuracy": {
+          "mean": 72.57,
+          "sd": 0.79,
+          "ci95_half_width": 1.97,
+          "min": 71.88,
+          "max": 73.44,
+          "values": [
+            73.44,
+            72.4,
+            71.88
+          ]
+        },
+        "ask_precision": {
+          "mean": 81.05,
+          "sd": 0.35,
+          "ci95_half_width": 0.87,
+          "min": 80.67,
+          "max": 81.36,
+          "values": [
+            81.36,
+            80.67,
+            81.13
+          ]
+        },
+        "ask_recall": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "ask_f1": {
+          "mean": 89.53,
+          "sd": 0.21,
+          "ci95_half_width": 0.53,
+          "min": 89.3,
+          "max": 89.72,
+          "values": [
+            89.72,
+            89.3,
+            89.58
+          ]
+        },
+        "closure_denial_accuracy": {
+          "mean": 76.62,
+          "sd": 0.53,
+          "ci95_half_width": 1.32,
+          "min": 76.04,
+          "max": 77.08,
+          "values": [
+            77.08,
+            76.04,
+            76.74
+          ]
+        },
+        "unresolved_ask_accuracy": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 100.0,
+          "max": 100.0,
+          "values": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "excessive_ask_on_closure_false_rate": {
+          "mean": 23.38,
+          "sd": 0.53,
+          "ci95_half_width": 1.32,
+          "min": 22.92,
+          "max": 23.96,
+          "values": [
+            22.92,
+            23.96,
+            23.26
+          ]
+        },
+        "premature_denial_rate": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95_half_width": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "item_decision_consistency": {
+        "n": 960,
+        "consistent": 934,
+        "rate": 97.29
+      },
+      "mean_parse_failures": 0.0,
+      "mean_api_errors": 0.0
+    },
+    "mistral-small": {
+      "model": "mistralai/mistral-small-2603",
+      "n_repeats": 3,
+      "replicates": [
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "mistralai/mistral-small-2603"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "json_valid": {
+            "n": 960,
+            "rate": 100.0
+          },
+          "truth_accuracy": {
+            "correct": 807,
+            "n": 960,
+            "accuracy": 84.06
+          },
+          "action_accuracy": {
+            "correct": 807,
+            "n": 960,
+            "accuracy": 84.06
+          },
+          "full_decision_accuracy": {
+            "correct": 802,
+            "n": 960,
+            "accuracy": 83.54
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 187,
+            "n": 320,
+            "accuracy": 58.44
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 186,
+            "n": 320,
+            "accuracy": 58.12
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 65,
+            "n": 192,
+            "accuracy": 33.85
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 64,
+            "n": 192,
+            "accuracy": 33.33
+          },
+          "ask_metrics": {
+            "true_positive": 253,
+            "model_asks": 369,
+            "gold_asks": 288,
+            "precision": 68.56,
+            "recall": 87.85,
+            "f1": 77.02
+          },
+          "targeted_information_accuracy": {
+            "correct": 248,
+            "n": 288,
+            "accuracy": 86.11
+          },
+          "closure_denial_accuracy": {
+            "correct": 176,
+            "n": 288,
+            "accuracy": 61.11
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 253,
+            "n": 288,
+            "accuracy": 87.85
+          },
+          "internal_action_consistency": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "premature_denial_rate": {
+            "count": 35,
+            "n": 288,
+            "rate": 12.15
+          },
+          "premature_approval_rate": {
+            "count": 2,
+            "n": 768,
+            "rate": 0.26
+          },
+          "excessive_ask_rate": {
+            "count": 116,
+            "n": 672,
+            "rate": 17.26
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 110,
+            "n": 288,
+            "rate": 38.19
+          },
+          "corrupt_action_success_rate": {
+            "count": 0,
+            "n": 960,
+            "rate": 0.0
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 2,
+              "n": 112,
+              "rate": 1.79
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 6,
+              "n": 40,
+              "rate": 15.0
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 90.0,
+              "action_accuracy": 90.0,
+              "full_accuracy": 90.0
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 64.06,
+              "action_accuracy": 64.06,
+              "full_accuracy": 63.75
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 98.12,
+              "action_accuracy": 98.12,
+              "full_accuracy": 96.88
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 75.42,
+              "action_accuracy": 75.42,
+              "full_accuracy": 75.42
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 87.85,
+              "action_accuracy": 87.85,
+              "full_accuracy": 86.11
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 100.0
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 96.88,
+              "action_accuracy": 96.88,
+              "full_accuracy": 96.88
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 83.33,
+              "action_accuracy": 83.33,
+              "full_accuracy": 83.33
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 16.67,
+              "action_accuracy": 16.67,
+              "full_accuracy": 16.67
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 63.54,
+              "action_accuracy": 63.54,
+              "full_accuracy": 62.5
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 97.92
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 53,
+              "n": 96,
+              "accuracy": 55.21
+            },
+            "closed_missing_direct": {
+              "correct": 68,
+              "n": 96,
+              "accuracy": 70.83
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 66,
+              "n": 96,
+              "accuracy": 68.75
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 90,
+              "n": 96,
+              "accuracy": 93.75
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 71,
+              "n": 96,
+              "accuracy": 73.96
+            },
+            "open_missing_direct": {
+              "correct": 85,
+              "n": 96,
+              "accuracy": 88.54
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 86,
+              "n": 96,
+              "accuracy": 89.58
+            }
+          },
+          "error_types": {
+            "correct": 802,
+            "excessive_ask_on_determined_case": 6,
+            "premature_denial_from_unresolved_absence": 35,
+            "untargeted_or_wrong_information_request": 5,
+            "excessive_ask_under_closure_false": 110,
+            "missed_closure_denial": 2
+          },
+          "repeat": 1,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_mistral-small_repeat_1_scored.jsonl"
+        },
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "mistralai/mistral-small-2603"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "json_valid": {
+            "n": 960,
+            "rate": 100.0
+          },
+          "truth_accuracy": {
+            "correct": 799,
+            "n": 960,
+            "accuracy": 83.23
+          },
+          "action_accuracy": {
+            "correct": 799,
+            "n": 960,
+            "accuracy": 83.23
+          },
+          "full_decision_accuracy": {
+            "correct": 795,
+            "n": 960,
+            "accuracy": 82.81
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 189,
+            "n": 320,
+            "accuracy": 59.06
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 187,
+            "n": 320,
+            "accuracy": 58.44
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 65,
+            "n": 192,
+            "accuracy": 33.85
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 63,
+            "n": 192,
+            "accuracy": 32.81
+          },
+          "ask_metrics": {
+            "true_positive": 249,
+            "model_asks": 366,
+            "gold_asks": 288,
+            "precision": 68.03,
+            "recall": 86.46,
+            "f1": 76.15
+          },
+          "targeted_information_accuracy": {
+            "correct": 245,
+            "n": 288,
+            "accuracy": 85.07
+          },
+          "closure_denial_accuracy": {
+            "correct": 170,
+            "n": 288,
+            "accuracy": 59.03
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 249,
+            "n": 288,
+            "accuracy": 86.46
+          },
+          "internal_action_consistency": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "premature_denial_rate": {
+            "count": 37,
+            "n": 288,
+            "rate": 12.85
+          },
+          "premature_approval_rate": {
+            "count": 7,
+            "n": 768,
+            "rate": 0.91
+          },
+          "excessive_ask_rate": {
+            "count": 117,
+            "n": 672,
+            "rate": 17.41
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 113,
+            "n": 288,
+            "rate": 39.24
+          },
+          "corrupt_action_success_rate": {
+            "count": 0,
+            "n": 960,
+            "rate": 0.0
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 3,
+              "n": 118,
+              "rate": 2.54
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 8,
+              "n": 43,
+              "rate": 18.6
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 89.06,
+              "action_accuracy": 89.06,
+              "full_accuracy": 89.06
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 62.19,
+              "action_accuracy": 62.19,
+              "full_accuracy": 62.19
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 98.44,
+              "action_accuracy": 98.44,
+              "full_accuracy": 97.19
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 99.48,
+              "action_accuracy": 99.48,
+              "full_accuracy": 99.48
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 74.79,
+              "action_accuracy": 74.79,
+              "full_accuracy": 74.79
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 86.46,
+              "action_accuracy": 86.46,
+              "full_accuracy": 85.07
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 99.48,
+              "action_accuracy": 99.48,
+              "full_accuracy": 99.48
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 98.44,
+              "action_accuracy": 98.44,
+              "full_accuracy": 98.44
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 81.77,
+              "action_accuracy": 81.77,
+              "full_accuracy": 81.77
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 13.54,
+              "action_accuracy": 13.54,
+              "full_accuracy": 13.54
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 60.42,
+              "action_accuracy": 60.42,
+              "full_accuracy": 60.42
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 99.48,
+              "action_accuracy": 99.48,
+              "full_accuracy": 97.4
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 47,
+              "n": 96,
+              "accuracy": 48.96
+            },
+            "closed_missing_direct": {
+              "correct": 67,
+              "n": 96,
+              "accuracy": 69.79
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 65,
+              "n": 96,
+              "accuracy": 67.71
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 95,
+              "n": 96,
+              "accuracy": 98.96
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 93,
+              "n": 96,
+              "accuracy": 96.88
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 69,
+              "n": 96,
+              "accuracy": 71.88
+            },
+            "open_missing_direct": {
+              "correct": 85,
+              "n": 96,
+              "accuracy": 88.54
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 86,
+              "n": 96,
+              "accuracy": 89.58
+            }
+          },
+          "error_types": {
+            "correct": 795,
+            "excessive_ask_on_determined_case": 4,
+            "excessive_ask_under_closure_false": 113,
+            "premature_denial_from_unresolved_absence": 37,
+            "premature_approval_from_unresolved_absence": 2,
+            "untargeted_or_wrong_information_request": 4,
+            "missed_closure_denial": 5
+          },
+          "repeat": 2,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_mistral-small_repeat_2_scored.jsonl"
+        },
+        {
+          "n_dataset": 960,
+          "n_scored": 960,
+          "coverage": 100.0,
+          "models": [
+            "mistralai/mistral-small-2603"
+          ],
+          "api_errors": 0,
+          "parse_failures": 0,
+          "json_valid": {
+            "n": 960,
+            "rate": 100.0
+          },
+          "truth_accuracy": {
+            "correct": 797,
+            "n": 960,
+            "accuracy": 83.02
+          },
+          "action_accuracy": {
+            "correct": 797,
+            "n": 960,
+            "accuracy": 83.02
+          },
+          "full_decision_accuracy": {
+            "correct": 792,
+            "n": 960,
+            "accuracy": 82.5
+          },
+          "semantic_switch_action_accuracy": {
+            "correct": 184,
+            "n": 320,
+            "accuracy": 57.5
+          },
+          "semantic_switch_full_accuracy": {
+            "correct": 181,
+            "n": 320,
+            "accuracy": 56.56
+          },
+          "core_semantic_switch_action_accuracy": {
+            "correct": 59,
+            "n": 192,
+            "accuracy": 30.73
+          },
+          "core_semantic_switch_full_accuracy": {
+            "correct": 56,
+            "n": 192,
+            "accuracy": 29.17
+          },
+          "ask_metrics": {
+            "true_positive": 243,
+            "model_asks": 360,
+            "gold_asks": 288,
+            "precision": 67.5,
+            "recall": 84.38,
+            "f1": 75.0
+          },
+          "targeted_information_accuracy": {
+            "correct": 238,
+            "n": 288,
+            "accuracy": 82.64
+          },
+          "closure_denial_accuracy": {
+            "correct": 173,
+            "n": 288,
+            "accuracy": 60.07
+          },
+          "unresolved_ask_accuracy": {
+            "correct": 243,
+            "n": 288,
+            "accuracy": 84.38
+          },
+          "internal_action_consistency": {
+            "correct": 960,
+            "n": 960,
+            "accuracy": 100.0
+          },
+          "premature_denial_rate": {
+            "count": 42,
+            "n": 288,
+            "rate": 14.58
+          },
+          "premature_approval_rate": {
+            "count": 4,
+            "n": 768,
+            "rate": 0.52
+          },
+          "excessive_ask_rate": {
+            "count": 117,
+            "n": 672,
+            "rate": 17.41
+          },
+          "excessive_ask_on_closure_false_rate": {
+            "count": 114,
+            "n": 288,
+            "rate": 39.58
+          },
+          "corrupt_action_success_rate": {
+            "count": 0,
+            "n": 960,
+            "rate": 0.0
+          },
+          "latent_self_correction_markers": {
+            "closure_false_errors_with_false_or_deny_marker": {
+              "count": 3,
+              "n": 115,
+              "rate": 2.61
+            },
+            "unresolved_errors_with_unknown_or_request_marker": {
+              "count": 9,
+              "n": 50,
+              "rate": 18.0
+            }
+          },
+          "by_semantics": {
+            "cwa": {
+              "n": 320,
+              "truth_accuracy": 90.0,
+              "action_accuracy": 90.0,
+              "full_accuracy": 90.0
+            },
+            "lcwa": {
+              "n": 320,
+              "truth_accuracy": 60.0,
+              "action_accuracy": 60.0,
+              "full_accuracy": 60.0
+            },
+            "owa": {
+              "n": 320,
+              "truth_accuracy": 99.06,
+              "action_accuracy": 99.06,
+              "full_accuracy": 97.5
+            }
+          },
+          "by_gold_action": {
+            "approve": {
+              "n": 192,
+              "truth_accuracy": 99.48,
+              "action_accuracy": 99.48,
+              "full_accuracy": 99.48
+            },
+            "deny": {
+              "n": 480,
+              "truth_accuracy": 75.62,
+              "action_accuracy": 75.62,
+              "full_accuracy": 75.62
+            },
+            "request_information": {
+              "n": 288,
+              "truth_accuracy": 84.38,
+              "action_accuracy": 84.38,
+              "full_accuracy": 82.64
+            }
+          },
+          "by_gold_reason_type": {
+            "entailed_by_fact_or_rule": {
+              "n": 192,
+              "truth_accuracy": 99.48,
+              "action_accuracy": 99.48,
+              "full_accuracy": 99.48
+            },
+            "explicit_negative_fact": {
+              "n": 192,
+              "truth_accuracy": 98.96,
+              "action_accuracy": 98.96,
+              "full_accuracy": 98.96
+            },
+            "global_closed_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 83.33,
+              "action_accuracy": 83.33,
+              "full_accuracy": 83.33
+            },
+            "local_closed_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 13.54,
+              "action_accuracy": 13.54,
+              "full_accuracy": 13.54
+            },
+            "local_open_world_underivable": {
+              "n": 96,
+              "truth_accuracy": 53.12,
+              "action_accuracy": 53.12,
+              "full_accuracy": 53.12
+            },
+            "open_world_underivable": {
+              "n": 192,
+              "truth_accuracy": 100.0,
+              "action_accuracy": 100.0,
+              "full_accuracy": 97.4
+            }
+          },
+          "by_family": {
+            "closed_derived_missing_antecedent": {
+              "correct": 46,
+              "n": 96,
+              "accuracy": 47.92
+            },
+            "closed_missing_direct": {
+              "correct": 66,
+              "n": 96,
+              "accuracy": 68.75
+            },
+            "closed_missing_with_open_distractor": {
+              "correct": 68,
+              "n": 96,
+              "accuracy": 70.83
+            },
+            "entailed_closed_conclusion": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "entailed_open_conclusion": {
+              "correct": 95,
+              "n": 96,
+              "accuracy": 98.96
+            },
+            "explicit_negative_closed": {
+              "correct": 96,
+              "n": 96,
+              "accuracy": 100.0
+            },
+            "explicit_negative_open": {
+              "correct": 94,
+              "n": 96,
+              "accuracy": 97.92
+            },
+            "open_derived_missing_antecedent": {
+              "correct": 69,
+              "n": 96,
+              "accuracy": 71.88
+            },
+            "open_missing_direct": {
+              "correct": 86,
+              "n": 96,
+              "accuracy": 89.58
+            },
+            "open_missing_with_closed_distractor": {
+              "correct": 81,
+              "n": 96,
+              "accuracy": 84.38
+            }
+          },
+          "error_types": {
+            "correct": 792,
+            "excessive_ask_under_closure_false": 114,
+            "premature_denial_from_unresolved_absence": 42,
+            "premature_approval_from_unresolved_absence": 3,
+            "untargeted_or_wrong_information_request": 5,
+            "excessive_ask_on_determined_case": 3,
+            "missed_closure_denial": 1
+          },
+          "repeat": 3,
+          "scored": "results/ask_act_replicates/closure_contract_v3_ask_act_mistral-small_repeat_3_scored.jsonl"
+        }
+      ],
+      "metrics": {
+        "action_accuracy": {
+          "mean": 83.44,
+          "sd": 0.55,
+          "ci95_half_width": 1.37,
+          "min": 83.02,
+          "max": 84.06,
+          "values": [
+            84.06,
+            83.23,
+            83.02
+          ]
+        },
+        "full_decision_accuracy": {
+          "mean": 82.95,
+          "sd": 0.53,
+          "ci95_half_width": 1.33,
+          "min": 82.5,
+          "max": 83.54,
+          "values": [
+            83.54,
+            82.81,
+            82.5
+          ]
+        },
+        "semantic_switch_action_accuracy": {
+          "mean": 58.33,
+          "sd": 0.79,
+          "ci95_half_width": 1.95,
+          "min": 57.5,
+          "max": 59.06,
+          "values": [
+            58.44,
+            59.06,
+            57.5
+          ]
+        },
+        "core_semantic_switch_action_accuracy": {
+          "mean": 32.81,
+          "sd": 1.8,
+          "ci95_half_width": 4.48,
+          "min": 30.73,
+          "max": 33.85,
+          "values": [
+            33.85,
+            33.85,
+            30.73
+          ]
+        },
+        "ask_precision": {
+          "mean": 68.03,
+          "sd": 0.53,
+          "ci95_half_width": 1.32,
+          "min": 67.5,
+          "max": 68.56,
+          "values": [
+            68.56,
+            68.03,
+            67.5
+          ]
+        },
+        "ask_recall": {
+          "mean": 86.23,
+          "sd": 1.75,
+          "ci95_half_width": 4.34,
+          "min": 84.38,
+          "max": 87.85,
+          "values": [
+            87.85,
+            86.46,
+            84.38
+          ]
+        },
+        "ask_f1": {
+          "mean": 76.06,
+          "sd": 1.01,
+          "ci95_half_width": 2.52,
+          "min": 75.0,
+          "max": 77.02,
+          "values": [
+            77.02,
+            76.15,
+            75.0
+          ]
+        },
+        "closure_denial_accuracy": {
+          "mean": 60.07,
+          "sd": 1.04,
+          "ci95_half_width": 2.58,
+          "min": 59.03,
+          "max": 61.11,
+          "values": [
+            61.11,
+            59.03,
+            60.07
+          ]
+        },
+        "unresolved_ask_accuracy": {
+          "mean": 86.23,
+          "sd": 1.75,
+          "ci95_half_width": 4.34,
+          "min": 84.38,
+          "max": 87.85,
+          "values": [
+            87.85,
+            86.46,
+            84.38
+          ]
+        },
+        "excessive_ask_on_closure_false_rate": {
+          "mean": 39.0,
+          "sd": 0.72,
+          "ci95_half_width": 1.8,
+          "min": 38.19,
+          "max": 39.58,
+          "values": [
+            38.19,
+            39.24,
+            39.58
+          ]
+        },
+        "premature_denial_rate": {
+          "mean": 13.19,
+          "sd": 1.25,
+          "ci95_half_width": 3.11,
+          "min": 12.15,
+          "max": 14.58,
+          "values": [
+            12.15,
+            12.85,
+            14.58
+          ]
+        }
+      },
+      "item_decision_consistency": {
+        "n": 960,
+        "consistent": 864,
+        "rate": 90.0
+      },
+      "mean_parse_failures": 0.0,
+      "mean_api_errors": 0.0
+    }
+  }
+}

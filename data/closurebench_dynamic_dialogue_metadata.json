@@ -1,0 +1,53 @@
+{
+  "source_dataset": "data/closurebench_base.jsonl",
+  "dataset": "data/closurebench_dynamic_dialogue.jsonl",
+  "n_dialogues": 100,
+  "n_turns": 300,
+  "turns_per_dialogue": 3,
+  "seed": 11,
+  "gold_patterns": {
+    "unknown|false|false": 50,
+    "unknown|false|unknown": 50
+  },
+  "dialogue_types": {
+    "persist_after_narrowing": 50,
+    "reopen": 50
+  },
+  "domains": {
+    "cloud_deployment": 8,
+    "finance_controls": 15,
+    "hospital_access": 13,
+    "library_services": 11,
+    "manufacturing_quality": 13,
+    "procurement_review": 12,
+    "robotics_operations": 15,
+    "university_registration": 13
+  },
+  "families": {
+    "closed_derived_missing_antecedent": 17,
+    "closed_missing_direct": 15,
+    "closed_missing_with_open_distractor": 18,
+    "open_derived_missing_antecedent": 16,
+    "open_missing_direct": 18,
+    "open_missing_with_closed_distractor": 16
+  },
+  "turn_update_sequence": [
+    "SET_COMPLETE_PREDICATES([])",
+    "ADD_COMPLETE_PREDICATES(vocabulary)",
+    "REPLACE_COMPLETE_PREDICATES(local_subset)"
+  ],
+  "primary_metrics": [
+    "dialogue_all_answer_accuracy",
+    "revision_accuracy",
+    "persistence_accuracy",
+    "dialogue_all_turn_accuracy",
+    "completeness_addition_accuracy",
+    "reopening_accuracy",
+    "narrowing_persistence_accuracy",
+    "closure_inertia_rate",
+    "closure_retention_failure_rate",
+    "changed_flag_accuracy",
+    "applied_update_accuracy",
+    "anchoring_error_rate"
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "dataset": "data/closurebench_base.jsonl",
+  "dataset_size": 960,
+  "repeats": 3,
+  "shards": 4,
+  "temperature": 1.0,
+  "run_tag": "temp1",
+  "runs": [
+    {
+      "label": "mistral-small",
+      "model": "mistralai/mistral-small-2603",
+      "repeat": 1,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_mistral-small_repeat_1_scored.jsonl"
+    },
+    {
+      "label": "mistral-small",
+      "model": "mistralai/mistral-small-2603",
+      "repeat": 2,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_mistral-small_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "mistral-small",
+      "model": "mistralai/mistral-small-2603",
+      "repeat": 3,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_mistral-small_repeat_3_scored.jsonl"
+    },
+    {
+      "label": "deepseek-flash",
+      "model": "deepseek-v4-flash",
+      "repeat": 1,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_deepseek-flash_repeat_1_scored.jsonl"
+    },
+    {
+      "label": "deepseek-flash",
+      "model": "deepseek-v4-flash",
+      "repeat": 2,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_deepseek-flash_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "deepseek-flash",
+      "model": "deepseek-v4-flash",
+      "repeat": 3,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_deepseek-flash_repeat_3_scored.jsonl"
+    },
+    {
+      "label": "deepseek-pro",
+      "model": "deepseek-v4-pro",
+      "repeat": 1,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_deepseek-pro_repeat_1_scored.jsonl"
+    },
+    {
+      "label": "deepseek-pro",
+      "model": "deepseek-v4-pro",
+      "repeat": 2,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_deepseek-pro_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "deepseek-pro",
+      "model": "deepseek-v4-pro",
+      "repeat": 3,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_deepseek-pro_repeat_3_scored.jsonl"
+    },
+    {
+      "label": "mistral-medium",
+      "model": "mistralai/mistral-medium-3-5",
+      "repeat": 1,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_mistral-medium_repeat_1_scored.jsonl"
+    },
+    {
+      "label": "mistral-medium",
+      "model": "mistralai/mistral-medium-3-5",
+      "repeat": 2,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_mistral-medium_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "mistral-medium",
+      "model": "mistralai/mistral-medium-3-5",
+      "repeat": 3,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_mistral-medium_repeat_3_scored.jsonl"
+    },
+    {
+      "label": "llama-scout",
+      "model": "meta-llama/llama-4-scout",
+      "repeat": 1,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_llama-scout_repeat_1_scored.jsonl"
+    },
+    {
+      "label": "llama-scout",
+      "model": "meta-llama/llama-4-scout",
+      "repeat": 2,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_llama-scout_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "llama-scout",
+      "model": "meta-llama/llama-4-scout",
+      "repeat": 3,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_llama-scout_repeat_3_scored.jsonl"
+    },
+    {
+      "label": "llama-maverick",
+      "model": "meta-llama/llama-4-maverick",
+      "repeat": 1,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_llama-maverick_repeat_1_scored.jsonl"
+    },
+    {
+      "label": "llama-maverick",
+      "model": "meta-llama/llama-4-maverick",
+      "repeat": 2,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_llama-maverick_repeat_2_scored.jsonl"
+    },
+    {
+      "label": "llama-maverick",
+      "model": "meta-llama/llama-4-maverick",
+      "repeat": 3,
+      "temperature": 1.0,
+      "scored": "results/replicates/closurebench_temp1_llama-maverick_repeat_3_scored.jsonl"
+    }
+  ]
+}
