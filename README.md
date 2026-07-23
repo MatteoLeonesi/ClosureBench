@@ -5,8 +5,6 @@
 [![Python](https://img.shields.io/badge/python-3.x-3776ab?logo=python&logoColor=white)](https://www.python.org/)
 [![GitHub stars](https://img.shields.io/github/stars/MatteoLeonesi/ClosureBench-nesyai?style=flat)](https://github.com/MatteoLeonesi/ClosureBench-nesyai/stargazers)
 
-![ClosureBench overview](assets/closurebench-overview.png)
-
 ClosureBench evaluates whether language models distinguish **unknown** from
 **false** under open-world, closed-world, and locally closed-world assumptions.
 It includes a base benchmark plus Ask/Act, Multi-Agent, and Dynamic Dialogue
