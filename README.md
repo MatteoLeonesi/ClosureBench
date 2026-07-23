@@ -2,8 +2,7 @@
 
 [![Paper](https://img.shields.io/badge/paper-coming%20soon-lightgrey)](#paper)
 [![NeSy 2026](https://img.shields.io/badge/NeSy%20AI-2026-0f766e)](https://nesy-ai.org/conferences/nesy-2026)
-[![Python](https://img.shields.io/badge/python-3.x-3776ab?logo=python&logoColor=white)](https://www.python.org/)
-[![GitHub stars](https://img.shields.io/github/stars/MatteoLeonesi/ClosureBench-nesyai?style=flat)](https://github.com/MatteoLeonesi/ClosureBench-nesyai/stargazers)
+
 
 ClosureBench evaluates whether language models distinguish **unknown** from
 **false** under open-world, closed-world, and locally closed-world assumptions.
