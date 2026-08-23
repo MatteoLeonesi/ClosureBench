@@ -2,6 +2,7 @@
 
 [![Paper](https://img.shields.io/badge/paper-coming%20soon-lightgrey)](#paper)
 [![NeSy 2026](https://img.shields.io/badge/NeSy%20AI-2026-0f766e)](https://nesy-ai.org/conferences/nesy-2026)
+[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-ClosureBench-FFD21E)](https://huggingface.co/datasets/ML0037/ClosureBench)
 
 ClosureBench evaluates if LLMs distinguish **unknown** from **false** under open-world, closed-world, and locally closed-world assumptions. It includes a base benchmark plus Ask/Act, Multi-Agent, and Dynamic Dialogue extensions. Models achieved up to 99.86% overall accuracy, yet core switch accuracy ranged from 18.23% to 99.31%, showing that aggregate scores can hide failures to apply the correct closure assumption. This matters for AI agents operating over incomplete records, where confusing unknown with false can lead to incorrect actions or unnecessary information requests.
 
